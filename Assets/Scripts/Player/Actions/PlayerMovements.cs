@@ -49,10 +49,13 @@ public class PlayerMovement : MonoBehaviour
     private float coyoteTimeCounter;
     private float jumpBufferCounter;
 
+    private AbilityUIController abilityUIController;
+
     void Awake()
     {
         // aqui guardo la referencia para no estar llamando GetComponent cada rato
         rb = GetComponent<Rigidbody2D>();
+        abilityUIController = FindAnyObjectByType<AbilityUIController>();
     }
 
     void Update()
@@ -193,6 +196,9 @@ public class PlayerMovement : MonoBehaviour
         isTouchingWall = Physics2D.Raycast(wallCheck.position, Vector2.right * Mathf.Sign(horizontalInput), wallCheckDistance * 25, wallLayer);
         isWallClinging = canUseWallCling && isTouchingWall && !isGrounded && horizontalInput != 0;
 
+        abilityUIController.SetClimbColor(isTouchingWall);
+        abilityUIController.SetDoubleJumpColor(canDoubleJump);
+
         if (animator != null)
         {
             animator.SetBool("IsWallClinging", isWallClinging);
@@ -220,6 +226,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (animator == null) return;
         bool isFalling = !isGrounded && !isWallClinging && rb.linearVelocity.y < 0 && !isDashing;
+        abilityUIController.SetGlideColor(isFalling);
 
         animator.SetBool("IsFalling", isFalling);
     }
