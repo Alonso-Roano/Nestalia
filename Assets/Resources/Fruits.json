@@ -1,0 +1,196 @@
+{
+  "items": [
+    {
+      "id": 0,
+      "itemName": "Maracuyá",
+      "spriteSheetPath": "Items/Fruits",
+      "spriteName": "Fruits_0",
+      "healthToRestore": 15,
+      "abilityGranted": "None"
+    },
+    {
+      "id": 1,
+      "itemName": "Mangos",
+      "spriteSheetPath": "Items/Fruits",
+      "spriteName": "Fruits_1",
+      "healthToRestore": 20,
+      "abilityGranted": "None"
+    },
+    {
+      "id": 2,
+      "itemName": "Tamarindo",
+      "spriteSheetPath": "Items/Fruits",
+      "spriteName": "Fruits_2",
+      "healthToRestore": 10,
+      "abilityGranted": "None"
+    },
+    {
+      "id": 3,
+      "itemName": "Pera",
+      "spriteSheetPath": "Items/Fruits",
+      "spriteName": "Fruits_3",
+      "healthToRestore": 25,
+      "abilityGranted": "None"
+    },
+    {
+      "id": 4,
+      "itemName": "Higo",
+      "spriteSheetPath": "Items/Fruits",
+      "spriteName": "Fruits_4",
+      "healthToRestore": 15,
+      "abilityGranted": "None"
+    },
+    {
+      "id": 5,
+      "itemName": "Mangostán",
+      "spriteSheetPath": "Items/Fruits",
+      "spriteName": "Fruits_5",
+      "healthToRestore": 30,
+      "abilityGranted": "None"
+    },
+    {
+      "id": 6,
+      "itemName": "Chirimoya",
+      "spriteSheetPath": "Items/Fruits",
+      "spriteName": "Fruits_6",
+      "healthToRestore": 25,
+      "abilityGranted": "None"
+    },
+    {
+      "id": 7,
+      "itemName": "Lichi",
+      "spriteSheetPath": "Items/Fruits",
+      "spriteName": "Fruits_7",
+      "healthToRestore": 15,
+      "abilityGranted": "None"
+    },
+    {
+      "id": 8,
+      "itemName": "Fresa",
+      "spriteSheetPath": "Items/Fruits",
+      "spriteName": "Fruits_8",
+      "healthToRestore": 20,
+      "abilityGranted": "None"
+    },
+    {
+      "id": 9,
+      "itemName": "Frutas de hielo",
+      "spriteSheetPath": "Items/Fruits",
+      "spriteName": "Fruits_9",
+      "healthToRestore": 35,
+      "abilityGranted": "None"
+    },
+    {
+      "id": 10,
+      "itemName": "Manzana",
+      "spriteSheetPath": "Items/Fruits",
+      "spriteName": "Fruits_10",
+      "healthToRestore": 20,
+      "abilityGranted": "None"
+    },
+    {
+      "id": 11,
+      "itemName": "Durián",
+      "spriteSheetPath": "Items/Fruits",
+      "spriteName": "Fruits_11",
+      "healthToRestore": 30,
+      "abilityGranted": "None"
+    },
+    {
+      "id": 12,
+      "itemName": "Aceituna",
+      "spriteSheetPath": "Items/Fruits",
+      "spriteName": "Fruits_12",
+      "healthToRestore": 25,
+      "abilityGranted": "None"
+    },
+    {
+      "id": 13,
+      "itemName": "Carambola",
+      "spriteSheetPath": "Items/Fruits",
+      "spriteName": "Fruits_13",
+      "healthToRestore": 20,
+      "abilityGranted": "None"
+    },
+    {
+      "id": 14,
+      "itemName": "Naranja",
+      "spriteSheetPath": "Items/Fruits",
+      "spriteName": "Fruits_14",
+      "healthToRestore": 25,
+      "abilityGranted": "None"
+    },
+    {
+      "id": 15,
+      "itemName": "Baya de Hielo",
+      "spriteSheetPath": "Items/Fruits",
+      "spriteName": "Fruits_15",
+      "healthToRestore": 30,
+      "abilityGranted": "None"
+    },
+    {
+      "id": 16,
+      "itemName": "Fruta Roca",
+      "spriteSheetPath": "Items/Fruits",
+      "spriteName": "Fruits_16",
+      "healthToRestore": 25,
+      "abilityGranted": "None"
+    },
+    {
+      "id": 17,
+      "itemName": "Fruta Dragón",
+      "spriteSheetPath": "Items/Fruits",
+      "spriteName": "Fruits_17",
+      "healthToRestore": 85,
+      "abilityGranted": "FireBreath"
+    },
+    {
+      "id": 18,
+      "itemName": "Fruta Serpiente",
+      "spriteSheetPath": "Items/Fruits",
+      "spriteName": "Fruits_18",
+      "healthToRestore": 70,
+      "abilityGranted": "PoisonFang"
+    },
+    {
+      "id": 19,
+      "itemName": "Fruta Amor",
+      "spriteSheetPath": "Items/Fruits",
+      "spriteName": "Fruits_19",
+      "healthToRestore": 90,
+      "abilityGranted": "Charm"
+    },
+    {
+      "id": 20,
+      "itemName": "Pera de Nieve",
+      "spriteSheetPath": "Items/Fruits",
+      "spriteName": "Fruits_20",
+      "healthToRestore": 80,
+      "abilityGranted": "Blizzard"
+    },
+    {
+      "id": 21,
+      "itemName": "Uva de nieve",
+      "spriteSheetPath": "Items/Fruits",
+      "spriteName": "Fruits_21",
+      "healthToRestore": 65,
+      "abilityGranted": "VineWhip"
+    },
+    {
+      "id": 22,
+      "itemName": "Plátano Arcoíris",
+      "spriteSheetPath": "Items/Fruits",
+      "spriteName": "Fruits_22",
+      "healthToRestore": 95,
+      "abilityGranted": "DoubleRainbow"
+    },
+    {
+      "id": 23,
+      "itemName": "Manzana Dorada",
+      "spriteSheetPath": "Items/Fruits",
+      "spriteName": "Fruits_23",
+      "healthToRestore": 100,
+      "abilityGranted": "SolarFlare"
+    }
+  ]
+}

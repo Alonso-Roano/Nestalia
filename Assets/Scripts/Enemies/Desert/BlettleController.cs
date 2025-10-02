@@ -198,8 +198,8 @@ public class BlettleController : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            // Llama a la función de daño del jugador (si existe su script PlayerHealth)
-            // other.GetComponent<PlayerHealth>().TakeDamage(attackDamage);
+            // Llama a la función de daño del jugador (si existe su script Controller)
+            // other.GetComponent<Controller>().TakeDamage(attackDamage);
         }
     }
 }

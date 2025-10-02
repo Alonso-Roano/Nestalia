@@ -5,14 +5,15 @@ public class HealthBar : MonoBehaviour
 {
     private Image healthBarImage;
 
-    [Tooltip("La vida máxima del personaje.")]
-    public float maxHealth = 100f; 
+    [Header("Referencias")]
+    [Tooltip("Arrastra aquí el objeto del Jugador que tiene el script PlayerHealth.")]
+    public PlayerHealth playerHealth;
 
     [Header("Sprites por Rango de Salud (0-100%)")]
     public Sprite spriteLowHealth;
     public Sprite spriteMidLowHealth;
     public Sprite spriteMidHighHealth;
-    public Sprite spriteFullHealth; 
+    public Sprite spriteFullHealth;
 
     [Header("Colores de Apoyo (opcional, para colorear el sprite)")]
     public Color colorLow = Color.red;
@@ -20,7 +21,6 @@ public class HealthBar : MonoBehaviour
     public Color colorMidHigh = Color.green;
     public Color colorFull = Color.blue;
 
-    private Sprite currentActiveSprite; 
     private int currentHealthTier = -1;
 
     void Awake()
@@ -35,19 +35,32 @@ public class HealthBar : MonoBehaviour
 
         if (healthBarImage.type != Image.Type.Filled || healthBarImage.fillMethod != Image.FillMethod.Vertical)
         {
-             healthBarImage.type = Image.Type.Filled;
-             healthBarImage.fillMethod = Image.FillMethod.Vertical;
-             Debug.LogWarning("Se ha ajustado el componente Image a 'Filled' con 'Vertical' Fill Method. Verifique el 'Fill Origin'.");
+            healthBarImage.type = Image.Type.Filled;
+            healthBarImage.fillMethod = Image.FillMethod.Vertical;
+            Debug.LogWarning("Se ha ajustado el componente Image a 'Filled' con 'Vertical' Fill Method. Verifique el 'Fill Origin'.");
         }
-        
-        SetHealth(maxHealth);
+    }
+    
+    void OnEnable()
+    {
+        if (playerHealth != null)
+        {
+            playerHealth.OnHealthPercentChanged += HandleHealthChanged;
+        }
     }
 
-    public void SetHealth(float currentHealth)
+    void OnDisable()
+    {
+        if (playerHealth != null)
+        {
+            playerHealth.OnHealthPercentChanged -= HandleHealthChanged;
+        }
+    }
+
+    private void HandleHealthChanged(float fillRatio)
     {
         if (healthBarImage == null) return;
 
-        float fillRatio = currentHealth / maxHealth;
         healthBarImage.fillAmount = fillRatio;
 
         int newHealthTier = GetHealthTier(fillRatio);
@@ -70,7 +83,7 @@ public class HealthBar : MonoBehaviour
     private void ApplyHealthTierVisuals(int tier)
     {
         Sprite targetSprite = null;
-        Color targetColor = Color.white; 
+        Color targetColor = Color.white;
 
         switch (tier)
         {
@@ -90,9 +103,6 @@ public class HealthBar : MonoBehaviour
                 targetSprite = spriteFullHealth;
                 targetColor = colorFull;
                 break;
-            default:
-                Debug.LogWarning("Rango de salud desconocido: " + tier);
-                return;
         }
 
         if (targetSprite != null)

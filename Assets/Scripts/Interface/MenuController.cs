@@ -6,7 +6,6 @@ public class MenuController : MonoBehaviour
 {
     [Header("Configuracion")]
     public GameObject menuPanel;
-    public PlayerMovement player;
 
     private bool menuOpen = false;
 

@@ -226,7 +226,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (animator == null) return;
         bool isFalling = !isGrounded && !isWallClinging && rb.linearVelocity.y < 0 && !isDashing;
-        abilityUIController.SetGlideColor(isFalling);
+        abilityUIController.SetGlideColor(isFalling || isDashing);
 
         animator.SetBool("IsFalling", isFalling);
     }

@@ -16,7 +16,7 @@ public class DamageHitBox : MonoBehaviour
             if (player != null)
             {
                 lastDamageTime = Time.time;
-                player.TakeDamage(controller.attackDamage, transform);
+                player.Health.TakeDamage(controller.attackDamage, transform);
                 Debug.Log($"Jugador recibió {controller.attackDamage} de daño de {controller.name}");
             }
         }

@@ -127,6 +127,33 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Select"",
+                    ""type"": ""Button"",
+                    ""id"": ""8779aa54-4acb-4051-abc5-234a97ba112e"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""MenuLeft"",
+                    ""type"": ""Button"",
+                    ""id"": ""2cb46d61-93c3-49d5-be89-a57c85949f1d"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""MenuRigth"",
+                    ""type"": ""Button"",
+                    ""id"": ""04c0a0d9-24e6-4a53-8fe0-d6a366704c97"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -272,6 +299,39 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""action"": ""Attack"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""4d922876-cf9c-45e1-bd1a-eff68aa1cc91"",
+                    ""path"": ""<Keyboard>/i"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Select"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""7dab1ff4-9d8f-448a-b59c-8b1fb396ae4c"",
+                    ""path"": ""<Keyboard>/j"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MenuLeft"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""452092ac-8061-433b-94ab-5d88b57768f7"",
+                    ""path"": ""<Keyboard>/l"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MenuRigth"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -284,6 +344,9 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         m_Player_Move = m_Player.FindAction("Move", throwIfNotFound: true);
         m_Player_SlowFall = m_Player.FindAction("SlowFall", throwIfNotFound: true);
         m_Player_Attack = m_Player.FindAction("Attack", throwIfNotFound: true);
+        m_Player_Select = m_Player.FindAction("Select", throwIfNotFound: true);
+        m_Player_MenuLeft = m_Player.FindAction("MenuLeft", throwIfNotFound: true);
+        m_Player_MenuRigth = m_Player.FindAction("MenuRigth", throwIfNotFound: true);
     }
 
     ~@PlayerInputActions()
@@ -368,6 +431,9 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Move;
     private readonly InputAction m_Player_SlowFall;
     private readonly InputAction m_Player_Attack;
+    private readonly InputAction m_Player_Select;
+    private readonly InputAction m_Player_MenuLeft;
+    private readonly InputAction m_Player_MenuRigth;
     /// <summary>
     /// Provides access to input actions defined in input action map "Player".
     /// </summary>
@@ -395,6 +461,18 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "Player/Attack".
         /// </summary>
         public InputAction @Attack => m_Wrapper.m_Player_Attack;
+        /// <summary>
+        /// Provides access to the underlying input action "Player/Select".
+        /// </summary>
+        public InputAction @Select => m_Wrapper.m_Player_Select;
+        /// <summary>
+        /// Provides access to the underlying input action "Player/MenuLeft".
+        /// </summary>
+        public InputAction @MenuLeft => m_Wrapper.m_Player_MenuLeft;
+        /// <summary>
+        /// Provides access to the underlying input action "Player/MenuRigth".
+        /// </summary>
+        public InputAction @MenuRigth => m_Wrapper.m_Player_MenuRigth;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -433,6 +511,15 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
             @Attack.started += instance.OnAttack;
             @Attack.performed += instance.OnAttack;
             @Attack.canceled += instance.OnAttack;
+            @Select.started += instance.OnSelect;
+            @Select.performed += instance.OnSelect;
+            @Select.canceled += instance.OnSelect;
+            @MenuLeft.started += instance.OnMenuLeft;
+            @MenuLeft.performed += instance.OnMenuLeft;
+            @MenuLeft.canceled += instance.OnMenuLeft;
+            @MenuRigth.started += instance.OnMenuRigth;
+            @MenuRigth.performed += instance.OnMenuRigth;
+            @MenuRigth.canceled += instance.OnMenuRigth;
         }
 
         /// <summary>
@@ -456,6 +543,15 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
             @Attack.started -= instance.OnAttack;
             @Attack.performed -= instance.OnAttack;
             @Attack.canceled -= instance.OnAttack;
+            @Select.started -= instance.OnSelect;
+            @Select.performed -= instance.OnSelect;
+            @Select.canceled -= instance.OnSelect;
+            @MenuLeft.started -= instance.OnMenuLeft;
+            @MenuLeft.performed -= instance.OnMenuLeft;
+            @MenuLeft.canceled -= instance.OnMenuLeft;
+            @MenuRigth.started -= instance.OnMenuRigth;
+            @MenuRigth.performed -= instance.OnMenuRigth;
+            @MenuRigth.canceled -= instance.OnMenuRigth;
         }
 
         /// <summary>
@@ -524,5 +620,26 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnAttack(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Select" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnSelect(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "MenuLeft" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnMenuLeft(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "MenuRigth" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnMenuRigth(InputAction.CallbackContext context);
     }
 }

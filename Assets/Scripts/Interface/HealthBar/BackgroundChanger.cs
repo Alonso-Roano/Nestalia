@@ -4,10 +4,34 @@ using UnityEngine.UI;
 public class BackgroundChanger : MonoBehaviour
 {
     public Sprite[] backgroundImages = new Sprite[10];
-    [Tooltip("Arrastra aquí el componente Image que se usará como fondo.")]
     public Image backgroundImageComponent;
-    [Tooltip("La vida máxima que el jugador puede tener (ej: 100).")]
-    public float maxHealth = 100f; 
+    public float maxHealth = 100f;
+
+    [Header("Referencias")]
+    [Tooltip("Arrastra aquí el objeto del Jugador que tiene el script PlayerHealth.")]
+    public PlayerHealth playerHealth;
+
+    void OnEnable()
+    {
+        if (playerHealth != null)
+        {
+            playerHealth.OnHealthPercentChanged += HandleHealthChanged;
+        }
+    }
+
+    void OnDisable()
+    {
+        if (playerHealth != null)
+        {
+            playerHealth.OnHealthPercentChanged -= HandleHealthChanged;
+        }
+    }
+
+    private void HandleHealthChanged(float healthPercent)
+    {
+        float currentHealthValue = healthPercent * maxHealth;
+        UpdateBackground(currentHealthValue);
+    }
 
     public void UpdateBackground(float currentHealth)
     {
