@@ -60,6 +60,8 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        if (Time.timeScale == 0f) return;
+
         MoveHorizontal();
         CheckSurroundings();
 
@@ -77,12 +79,19 @@ public class PlayerMovement : MonoBehaviour
     // método que viene del sistema de Input para moverme
     public void OnMove(InputAction.CallbackContext context)
     {
+        if (Time.timeScale == 0f)
+        {
+            horizontalInput = 0;
+            return;
+        }
         horizontalInput = context.ReadValue<Vector2>().x;
     }
 
     // salto con buffer y salto variable
     public void OnJump(InputAction.CallbackContext context)
     {
+        if (Time.timeScale == 0f) return;
+
         if (!canUseJump) return; // si desactivo salto, no hago nada
 
         if (context.performed)
@@ -96,6 +105,8 @@ public class PlayerMovement : MonoBehaviour
     // dash on/off
     public void OnDash(InputAction.CallbackContext context)
     {
+        if (Time.timeScale == 0f) return;
+
         if (!canUseDash) return; // si dash está apagado, ignoro la entrada
         isDashing = context.performed;
     }
@@ -115,7 +126,7 @@ public class PlayerMovement : MonoBehaviour
             transform.localScale = new Vector3(-originalScaleX, transform.localScale.y, transform.localScale.z);
     }
 
-   private void HandleSlowFall()
+    private void HandleSlowFall()
     {
         bool isCurrentlyPlanning = !isGrounded && !isWallClinging && rb.linearVelocity.y < 0 && isDashing;
 
@@ -124,7 +135,7 @@ public class PlayerMovement : MonoBehaviour
             animator.SetBool("IsPlanning", isCurrentlyPlanning);
         }
 
-        if (isCurrentlyPlanning) 
+        if (isCurrentlyPlanning)
         {
             float slowFallForce = Mathf.Abs(rb.linearVelocity.y) * rb.mass * -(1 - (slowFallMultiplier * 10));
             rb.AddForce(Vector2.up * slowFallForce, ForceMode2D.Force);

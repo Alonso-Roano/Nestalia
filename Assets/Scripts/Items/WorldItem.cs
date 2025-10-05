@@ -92,7 +92,7 @@ public class WorldItem : MonoBehaviour
             }
             else
             {
-                Debug.LogWarning("El objeto con tag 'Player' no tiene un componente PlayerInventory.");
+                Debug.LogWarning("El objeto con tag 'Player' no tiene un componente inventory.");
             }
         }
     }
