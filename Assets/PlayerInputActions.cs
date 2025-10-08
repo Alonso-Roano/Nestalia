@@ -172,6 +172,15 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Health"",
+                    ""type"": ""Button"",
+                    ""id"": ""b434bfc4-b1a6-4a15-950e-4e20111f4aa3"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -383,6 +392,17 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""action"": ""Next"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""fa4d0d20-1a1a-4dc3-9104-12796ab1482f"",
+                    ""path"": ""<Keyboard>/r"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Health"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -400,6 +420,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         m_Player_MenuRigth = m_Player.FindAction("MenuRigth", throwIfNotFound: true);
         m_Player_Talk = m_Player.FindAction("Talk", throwIfNotFound: true);
         m_Player_Next = m_Player.FindAction("Next", throwIfNotFound: true);
+        m_Player_Health = m_Player.FindAction("Health", throwIfNotFound: true);
     }
 
     ~@PlayerInputActions()
@@ -489,6 +510,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_MenuRigth;
     private readonly InputAction m_Player_Talk;
     private readonly InputAction m_Player_Next;
+    private readonly InputAction m_Player_Health;
     /// <summary>
     /// Provides access to input actions defined in input action map "Player".
     /// </summary>
@@ -536,6 +558,10 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "Player/Next".
         /// </summary>
         public InputAction @Next => m_Wrapper.m_Player_Next;
+        /// <summary>
+        /// Provides access to the underlying input action "Player/Health".
+        /// </summary>
+        public InputAction @Health => m_Wrapper.m_Player_Health;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -589,6 +615,9 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
             @Next.started += instance.OnNext;
             @Next.performed += instance.OnNext;
             @Next.canceled += instance.OnNext;
+            @Health.started += instance.OnHealth;
+            @Health.performed += instance.OnHealth;
+            @Health.canceled += instance.OnHealth;
         }
 
         /// <summary>
@@ -627,6 +656,9 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
             @Next.started -= instance.OnNext;
             @Next.performed -= instance.OnNext;
             @Next.canceled -= instance.OnNext;
+            @Health.started -= instance.OnHealth;
+            @Health.performed -= instance.OnHealth;
+            @Health.canceled -= instance.OnHealth;
         }
 
         /// <summary>
@@ -730,5 +762,12 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnNext(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Health" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnHealth(InputAction.CallbackContext context);
     }
 }

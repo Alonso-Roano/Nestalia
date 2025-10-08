@@ -105,6 +105,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DamageHitBox
   damageInterval: 0.5
+  attackDamage: 10
 --- !u!70 &1584455131199049140
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -167,7 +168,7 @@ Transform:
   m_GameObject: {fileID: 703627326851344158}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.55, y: 0.000000014108294, z: 0}
+  m_LocalPosition: {x: 0.55, y: -0.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -185,10 +186,13 @@ GameObject:
   - component: {fileID: 3853417331301029437}
   - component: {fileID: 294444016106607017}
   - component: {fileID: 3417380523617958740}
-  - component: {fileID: 6390205143473653853}
+  - component: {fileID: 8256946952322087323}
+  - component: {fileID: 475633443836891762}
+  - component: {fileID: 1868161019675050507}
+  - component: {fileID: 6951116941923117177}
   m_Layer: 0
   m_Name: Bettle
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -330,7 +334,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: -0.07343748}
+  m_Offset: {x: -0.015625, y: -0.08906251}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -339,10 +343,10 @@ BoxCollider2D:
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_AutoTiling: 1
   m_Size: {x: 0.8125, y: 0.484375}
   m_EdgeRadius: 0
---- !u!114 &6390205143473653853
+--- !u!114 &8256946952322087323
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -351,31 +355,68 @@ MonoBehaviour:
   m_GameObject: {fileID: 4495078558436682357}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cea61c46b272c864a87ac5b508719412, type: 3}
+  m_Script: {fileID: 11500000, guid: f898affdc3a00ab47a38341da5f1f444, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::BlettleController
-  maxHealth: 3
-  moveSpeed: 1
-  attackDamage: 10
-  invulnerabilityTime: 0.5
-  patrolDistance: 1
-  detectionRange: 300
-  attackRange: 100
-  chaseSpeedMultiplier: 1.5
-  chargeTime: 0.2
-  chargeSpeed: 100
-  attackLungeForce: 150
-  recoilForce: 30
-  attackCooldown: 1.5
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyMovement
+  moveSpeed: 150
   jumpForce: 15
-  obstacleLayer:
-    serializedVersion: 2
-    m_Bits: 64
+  groundCheck: {fileID: 5851337713343152281}
+  obstacleCheck: {fileID: 1727775113653157537}
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
-  groundCheck: {fileID: 5851337713343152281}
-  obstacleCheker: {fileID: 1727775113653157537}
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 64
+--- !u!114 &475633443836891762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4495078558436682357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9a7501aaedd2ce4d9c75c3b20efb2eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyHealth
+  maxHealth: 3
+  invulnerabilityTime: 0.2
+  knockbackForce: 100
+  knockbackUpForce: 0
+--- !u!114 &1868161019675050507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4495078558436682357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 017dbdacbdd8a354c8586cb04fc99340, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyAttack_Lunge
+  chargeTime: 0.2
+  chargeSpeed: 100
+  attackLungeForce: 150
+  recoilForce: 50
+  attackCooldown: 0.5
+  attackDamage: 10
+--- !u!114 &6951116941923117177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4495078558436682357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ab98acca9e095d4abc30ff5c39b7144, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BlettleAI
+  detectionRange: 200
+  attackRange: 100
+  patrolDistance: 200
 --- !u!1 &7867112070936283612
 GameObject:
   m_ObjectHideFlags: 0

@@ -14,4 +14,9 @@ public class PlayerInventory : MonoBehaviour
 
         OnItemAdded?.Invoke(itemID);
     }
+    public void RemoveAt(int itemID)
+    {
+        itemIDs.RemoveAt(itemID);
+        Debug.Log("Item agregado al inventario: " + itemID);
+    }
 }

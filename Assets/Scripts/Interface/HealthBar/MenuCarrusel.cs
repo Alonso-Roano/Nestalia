@@ -33,13 +33,21 @@ public class MenuCarrusel : MonoBehaviour
     public CanvasGroup indexDisplayCanvasGroup;
     public float indexFadeOutDuration = 0.5f;
 
+    [Header("Animator de Bubo")]
+    [SerializeField] public Animator animator;
+
     private List<GameObject> items = new List<GameObject>();
     private List<Image> itemMasks = new List<Image>();
+
+    public Sprite[] backgroundImages = new Sprite[24];
+    public GameObject backgroundImageComponent;
     private int currentIndex = 0;
     private float itemSize;
     private bool inputDelay = false;
     private Coroutine showIndexCoroutine;
     private bool isBouncing = false;
+    private Coroutine showBackgroundCoroutine;
+    public float backgroundDisplayTime = 2f;
 
     void OnEnable()
     {
@@ -57,7 +65,10 @@ public class MenuCarrusel : MonoBehaviour
         {
             indexDisplayContainer.SetActive(false);
         }
-
+        if (backgroundImageComponent != null)
+        {
+            backgroundImageComponent.gameObject.SetActive(false);
+        }
         PopulateMenuFromInventory();
     }
 
@@ -95,6 +106,12 @@ public class MenuCarrusel : MonoBehaviour
         CreateMenuItem(itemID);
 
         currentIndex = items.Count - 1;
+
+        if (showBackgroundCoroutine != null)
+        {
+            StopCoroutine(showBackgroundCoroutine);
+        }
+        showBackgroundCoroutine = StartCoroutine(ShowBackgroundImageTemporarily(itemID));
 
         ShowIndexIndicator();
 
@@ -142,7 +159,7 @@ public class MenuCarrusel : MonoBehaviour
         Canvas.ForceUpdateCanvases();
 
         HorizontalLayoutGroup layout = GetComponent<HorizontalLayoutGroup>();
-        if (layout != null && items.Count > 0)
+        if (layout != null && items.Count > 0 && items[0] != null)
         {
             itemSize = items[0].GetComponent<RectTransform>().rect.width + layout.spacing;
         }
@@ -170,7 +187,7 @@ public class MenuCarrusel : MonoBehaviour
 
     private void Navigate(int direction)
     {
-        if (isBouncing) return;
+        if (isBouncing || items.Count == 0) return;
 
         int newIndex = currentIndex + direction;
 
@@ -204,13 +221,99 @@ public class MenuCarrusel : MonoBehaviour
 
     void SelectItem(int index)
     {
-        if (index < 0 || index >= controller.Inventory.itemIDs.Count) return;
+        if (index < 0 || index >= controller.Inventory.itemIDs.Count)
+        {
+            Debug.LogWarning("Índice de ítem inválido o inventario vacío.");
+            return;
+        }
 
         int selectedItemID = controller.Inventory.itemIDs[index];
-        string selectedItemName = ItemFactory.GetBlueprint(selectedItemID)?.itemName ?? "Desconocido";
+        ItemBlueprint blueprint = ItemFactory.GetBlueprint(selectedItemID);
+        if (blueprint == null)
+        {
+            Debug.LogError($"No se encontró el Blueprint para el ID de ítem: {selectedItemID}");
+            return;
+        }
+        string selectedItemName = blueprint.itemName;
+        int selectedItemHealth = blueprint.healthToRestore;
 
-        Debug.Log($"Ítem seleccionado: {selectedItemName} (ID: {selectedItemID})");
+        if (selectedItemHealth > 0)
+        {
+            PlayerHealth playerHealth = controller.GetComponent<PlayerHealth>();
+            if (playerHealth == null)
+            {
+                Debug.LogError("No se encontró el componente PlayerHealth en el jugador.");
+                return;
+            }
+
+            if (showBackgroundCoroutine != null)
+            {
+                StopCoroutine(showBackgroundCoroutine);
+            }
+            showBackgroundCoroutine = StartCoroutine(ShowBackgroundImageTemporarily(selectedItemID));
+
+            // Si el jugador ya tiene la vida al máximo, no hacer nada.
+            if (playerHealth.GetCurrentHealth() >= playerHealth.maxHealth)
+            {
+                Debug.Log("La vida ya está al máximo. No se puede usar el objeto.");
+                // Aquí podrías añadir un sonido o efecto visual para indicar que no se puede usar.
+                return;
+            }
+
+            if (blueprint.isAbilityBooster)
+            {
+                // Buscamos nuestro nuevo gestor
+                PlayerStatusEffects statusManager = controller.GetComponent<PlayerStatusEffects>();
+                if (statusManager != null)
+                {
+                    statusManager.ApplyEffect(blueprint);
+                }
+                else
+                {
+                    Debug.LogError("No se encontró el componente PlayerStatusEffects en el jugador.");
+                }
+            }
+
+            playerHealth.Heal(selectedItemHealth);
+            Debug.Log($"Se usó '{selectedItemName}'. Vida del jugador restaurada.");
+
+            controller.Inventory.RemoveAt(index);
+
+            GameObject itemToDestroy = items[index];
+            items.RemoveAt(index);
+            itemMasks.RemoveAt(index);
+            Destroy(itemToDestroy);
+
+            if (items.Count > 0)
+            {
+                currentIndex = Mathf.Clamp(currentIndex, 0, items.Count - 1);
+            }
+            else
+            {
+                currentIndex = 0;
+            }
+
+            UpdateLayoutAndVisuals();
+
+            if (items.Count > 0)
+            {
+                ShowIndexIndicator();
+            }
+            else
+            {
+                if (indexDisplayContainer != null)
+                {
+                    if (showIndexCoroutine != null) StopCoroutine(showIndexCoroutine);
+                    indexDisplayContainer.SetActive(false);
+                }
+            }
+        }
+        else
+        {
+            Debug.Log($"Ítem seleccionado: {selectedItemName} (ID: {selectedItemID}) - No es un consumible de vida.");
+        }
     }
+
 
     void UpdateScrollPosition()
     {
@@ -308,7 +411,7 @@ public class MenuCarrusel : MonoBehaviour
 
     void ShowIndexIndicator()
     {
-        if (indexDisplayContainer == null || indexDisplayText == null) return;
+        if (indexDisplayContainer == null || indexDisplayText == null || items.Count == 0) return;
 
         if (showIndexCoroutine != null)
         {
@@ -331,7 +434,7 @@ public class MenuCarrusel : MonoBehaviour
 
         indexDisplayContainer.SetActive(true);
         indexDisplayCanvasGroup.alpha = 1f;
-        indexDisplayText.text = itemName; 
+        indexDisplayText.text = itemName;
 
         yield return new WaitForSeconds(indexDisplayTime);
 
@@ -345,5 +448,32 @@ public class MenuCarrusel : MonoBehaviour
 
         indexDisplayCanvasGroup.alpha = 0f;
         indexDisplayContainer.SetActive(false);
+    }
+    private IEnumerator ShowBackgroundImageTemporarily(int itemID)
+    {
+        animator.SetTrigger("Fruit");
+        // Primero, revisa que el objeto y los datos sean válidos
+        if (backgroundImageComponent == null || itemID < 0 || itemID >= backgroundImages.Length)
+        {
+            yield break;
+        }
+
+        // Busca el componente SpriteRenderer en el objeto
+        SpriteRenderer sRenderer = backgroundImageComponent.GetComponent<SpriteRenderer>();
+        if (sRenderer == null)
+        {
+            Debug.LogError("¡Error! El 'backgroundImageComponent' no tiene un componente SpriteRenderer.");
+            yield break;
+        }
+
+        // Asigna el sprite y activa el GameObject
+        sRenderer.sprite = backgroundImages[itemID];
+        backgroundImageComponent.SetActive(true);
+
+        // Espera el tiempo definido
+        yield return new WaitForSeconds(backgroundDisplayTime);
+
+        // Desactiva el GameObject
+        backgroundImageComponent.SetActive(false);
     }
 }

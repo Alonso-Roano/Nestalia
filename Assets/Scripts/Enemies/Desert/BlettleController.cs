@@ -2,7 +2,7 @@ using UnityEngine;
 using System.Collections;
 using System;
 
-public class BlettleController : MonoBehaviour
+public class BlettleController : MonoBehaviour, AttackHitbox.IEnemyDamageable
 {
     // --- EVENTOS ---
     public event Action OnAttack;
@@ -54,7 +54,7 @@ public class BlettleController : MonoBehaviour
     [Tooltip("Tiempo en segundos antes de poder atacar de nuevo.")]
     public float attackCooldown = 1.5f;
     private bool isAttacking = false;
-    
+
     [Header("Pathfinding y Salto")]
     [Tooltip("La fuerza del salto del enemigo.")]
     public float jumpForce = 400f;
@@ -66,9 +66,14 @@ public class BlettleController : MonoBehaviour
     public Transform groundCheck;
     [Tooltip("Punto de origen para detectar el obstaculo.")]
     public Transform obstacleCheker;
+
+    [Header("Knockback")]
+    [Tooltip("Fuerza base de empuje horizontal.")]
+    public float knockForce = 100f;
+    [Tooltip("Fuerza vertical (hacia arriba) del knockback.")]
+    public float knockUpForce = 50f;
     private bool isGrounded;
     private bool isObstacle;
-    private bool shouldJump = false;
 
 
     void Start()
@@ -102,7 +107,7 @@ public class BlettleController : MonoBehaviour
         {
             HandleAI();
         }
-        
+
         if (isGrounded && isObstacle)
         {
             rb.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
@@ -136,11 +141,11 @@ public class BlettleController : MonoBehaviour
             ChaseMovement();
         }
     }
-    
+
     private void ChaseMovement()
     {
         if (target == null) return;
-        
+
         float distanceToPlayer = Vector2.Distance(transform.position, target.position);
 
         if (distanceToPlayer > attackRange)
@@ -189,7 +194,7 @@ public class BlettleController : MonoBehaviour
         rb.linearVelocity = Vector2.zero;
         Vector2 recoilDirection = -directionToTarget;
         rb.AddForce(recoilDirection * recoilForce, ForceMode2D.Impulse);
-        
+
         yield return new WaitForSeconds(attackCooldown);
 
         isAttacking = false;
@@ -202,7 +207,7 @@ public class BlettleController : MonoBehaviour
 
         float currentDistance = transform.position.x - startPosition.x;
 
-        if ((moveDirection == 1 && currentDistance >= (patrolDistance * 100)) || 
+        if ((moveDirection == 1 && currentDistance >= (patrolDistance * 100)) ||
             (moveDirection == -1 && currentDistance <= -(patrolDistance * 100)))
         {
             FlipSprite(-moveDirection);
@@ -214,12 +219,21 @@ public class BlettleController : MonoBehaviour
         moveDirection = newDirection;
         transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x) * newDirection, transform.localScale.y, transform.localScale.z);
     }
-    
-    public void TakeDamage(int damage)
+
+    public void TakeDamage(int damage, Vector2 damageSourcePosition)
     {
         if (isInvulnerable) return;
 
         currentHealth -= damage;
+        StopAllCoroutines();
+
+        isAttacking = false;
+
+        Vector2 knockbackDirection = ((Vector2)transform.position - damageSourcePosition).normalized;
+        Vector2 knockDir = new Vector2(knockbackDirection.x * knockForce, knockUpForce);
+
+        rb.linearVelocity = Vector2.zero;
+        rb.AddForce(knockDir, ForceMode2D.Impulse);
 
         if (currentHealth <= 0)
         {
@@ -257,7 +271,7 @@ public class BlettleController : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-             // other.gameObject.GetComponent<Controller>()?.TakeDamage(attackDamage);
+            // other.gameObject.GetComponent<Controller>()?.TakeDamage(attackDamage);
         }
     }
 }

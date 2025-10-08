@@ -3,6 +3,7 @@ using UnityEngine;
 public class DamageHitBox : MonoBehaviour
 {
     [SerializeField] private float damageInterval = 1f;
+    [SerializeField] private int attackDamage = 10;
     private float lastDamageTime = -999f;
 
     private void OnTriggerStay2D(Collider2D other)
@@ -11,13 +12,12 @@ public class DamageHitBox : MonoBehaviour
 
         if (Time.time >= lastDamageTime + damageInterval)
         {
-            var controller = GetComponentInParent<BlettleController>();
             var player = other.GetComponentInParent<PlayerController>();
             if (player != null)
             {
                 lastDamageTime = Time.time;
-                player.Health.TakeDamage(controller.attackDamage, transform);
-                Debug.Log($"Jugador recibió {controller.attackDamage} de daño de {controller.name}");
+                player.Health.TakeDamage(attackDamage, transform);
+                Debug.Log($"Jugador recibió {attackDamage} de daño");
             }
         }
     }

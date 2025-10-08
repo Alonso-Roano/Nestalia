@@ -1,0 +1,533 @@
+fileFormatVersion: 2
+guid: 10072c7af1d52dd428afa145e5f8e511
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6494301376522362400
+    second: 02-nubes_0
+  - first:
+      213: 1667774100742061586
+    second: 02-nubes_1
+  - first:
+      213: -5120005994148129835
+    second: 02-nubes_2
+  - first:
+      213: -7454774380944348715
+    second: 02-nubes_3
+  - first:
+      213: -5181952506827792342
+    second: 02-nubes_4
+  - first:
+      213: 2514118155648570117
+    second: 02-nubes_5
+  - first:
+      213: -4112950665051724383
+    second: 02-nubes_6
+  - first:
+      213: -3667276646858615023
+    second: 02-nubes_7
+  - first:
+      213: -8603098219775312063
+    second: 02-nubes_8
+  - first:
+      213: 2047654589609610303
+    second: 02-nubes_9
+  - first:
+      213: -8032427574912009177
+    second: 02-nubes_10
+  - first:
+      213: -2007283973976781540
+    second: 02-nubes_11
+  - first:
+      213: 8869653192157448548
+    second: 02-nubes_12
+  - first:
+      213: -8997371178618862430
+    second: 02-nubes_13
+  - first:
+      213: -5360945298864021089
+    second: 02-nubes_14
+  - first:
+      213: -835833709339006951
+    second: 02-nubes_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 180
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: 02-nubes_0
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 158
+        width: 30
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02e12f391b4602a50800000000000000
+      internalID: 6494301376522362400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 02-nubes_1
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 166
+        width: 30
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21eb35855bf152710800000000000000
+      internalID: 1667774100742061586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 02-nubes_2
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 161
+        width: 30
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d31eeedca512f8b0800000000000000
+      internalID: -5120005994148129835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 02-nubes_3
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 161
+        width: 20
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d9212792325b8890800000000000000
+      internalID: -7454774380944348715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 02-nubes_4
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 167
+        width: 20
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a20a59376a10618b0800000000000000
+      internalID: -5181952506827792342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 02-nubes_5
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 158
+        width: 27
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5031bc66421f3e220800000000000000
+      internalID: 2514118155648570117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 02-nubes_6
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 145
+        width: 30
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a5a2e6592ddbe6c0800000000000000
+      internalID: -4112950665051724383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 02-nubes_7
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 154
+        width: 30
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11718ead1573b1dc0800000000000000
+      internalID: -3667276646858615023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 02-nubes_8
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 154
+        width: 27
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14f3f7210c7ab9880800000000000000
+      internalID: -8603098219775312063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 02-nubes_9
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 147
+        width: 27
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3c0164100bba6c10800000000000000
+      internalID: 2047654589609610303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 02-nubes_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 131
+        width: 30
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72c3151ada5178090800000000000000
+      internalID: -8032427574912009177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 02-nubes_11
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 133
+        width: 27
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1d87c75cd1b424e0800000000000000
+      internalID: -2007283973976781540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 02-nubes_12
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 141
+        width: 30
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4694477b596571b70800000000000000
+      internalID: 8869653192157448548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 02-nubes_13
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 141
+        width: 20
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a4c51a459ae22380800000000000000
+      internalID: -8997371178618862430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 02-nubes_14
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 136
+        width: 19
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f91e8e877a81a95b0800000000000000
+      internalID: -5360945298864021089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 02-nubes_15
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 132
+        width: 19
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9182d877ba58664f0800000000000000
+      internalID: -835833709339006951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      02-nubes_0: 6494301376522362400
+      02-nubes_1: 1667774100742061586
+      02-nubes_10: -8032427574912009177
+      02-nubes_11: -2007283973976781540
+      02-nubes_12: 8869653192157448548
+      02-nubes_13: -8997371178618862430
+      02-nubes_14: -5360945298864021089
+      02-nubes_15: -835833709339006951
+      02-nubes_2: -5120005994148129835
+      02-nubes_3: -7454774380944348715
+      02-nubes_4: -5181952506827792342
+      02-nubes_5: 2514118155648570117
+      02-nubes_6: -4112950665051724383
+      02-nubes_7: -3667276646858615023
+      02-nubes_8: -8603098219775312063
+      02-nubes_9: 2047654589609610303
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

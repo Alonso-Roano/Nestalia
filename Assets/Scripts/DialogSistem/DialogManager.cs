@@ -15,7 +15,6 @@ public class DialogManager : MonoBehaviour
     [SerializeField] private InputActionReference nextDialogueActionReference;
     private InputAction nextDialogueAction;
     [SerializeField] private float typingSpeed = 0.03f;
-    private bool isTyping;
 
     private void Awake()
     {
@@ -77,7 +76,6 @@ public class DialogManager : MonoBehaviour
 
     private IEnumerator TypeLine(string line)
     {
-        isTyping = true;
         ClearDialogArea();
         
         foreach (char c in line.ToCharArray())
@@ -92,7 +90,6 @@ public class DialogManager : MonoBehaviour
             
             yield return new WaitForSecondsRealtime(typingSpeed);
         }
-        isTyping = false;
     }
 
     [SerializeField] private RectTransform dialogBox;

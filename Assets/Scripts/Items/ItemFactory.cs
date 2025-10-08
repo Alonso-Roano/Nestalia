@@ -21,6 +21,12 @@ public class ItemBlueprint
 
     public int healthToRestore;
     public string abilityGranted;
+
+    public bool isAbilityBooster = false;
+    public float boostMultiplier = 1.5f;
+    public float boostDuration = 10f;
+
+    public string change = "jump";
 }
 
 // Contenedor para la lista completa de ítems que será el objeto raíz del JSON.
