@@ -6,6 +6,60 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: 7506a19e0eee5054894833f784d11cce
+  - enabled: 1
+    path: Assets/Scenes/IntroCinematic.unity
+    guid: a1a1f3247b918ae49b660aca0fc28320
+  - enabled: 1
+    path: Assets/Scenes/Desert/DesertLevel1.unity
+    guid: edfcf30b1769e62449926e4fe452f1e5
+  - enabled: 1
+    path: Assets/Scenes/Desert/DesertLevel2.unity
+    guid: 5ee3f7cb30c48c047b07583194831aec
+  - enabled: 1
+    path: Assets/Scenes/Desert/DesertLevel3.unity
+    guid: a2383ff2b4cae414f9281bd6b865c272
+  - enabled: 1
+    path: Assets/Scenes/Desert/DesertFinalCinematic.unity
+    guid: 2a2c07f13e3ddd04ca19ffe46645d517
+  - enabled: 1
+    path: Assets/Scenes/Swamp/SwampLevel1.unity
+    guid: 6e9472b267757554a8ddcb3db652710e
+  - enabled: 1
+    path: Assets/Scenes/Swamp/SwampLevel2.unity
+    guid: 9a2c568a07dbacf4a90c4fc086268252
+  - enabled: 1
+    path: Assets/Scenes/Swamp/SwampLevel3.unity
+    guid: 9e985a6c031352449886726e1f400266
+  - enabled: 1
+    path: Assets/Scenes/Swamp/SwampFinalCinematic.unity
+    guid: 95cfa649c4ab79d4490820ec143311db
+  - enabled: 1
+    path: Assets/Scenes/Tundra/TundraLevel1.unity
+    guid: 8e76b93289f53bd47aa5736706201277
+  - enabled: 1
+    path: Assets/Scenes/Tundra/TundraLevel2.unity
+    guid: 0103ad6270b22864e833cfce83d43618
+  - enabled: 1
+    path: Assets/Scenes/Tundra/TundraLevel3.unity
+    guid: 173d964757cc9374c97cec6d3330a966
+  - enabled: 1
+    path: Assets/Scenes/Tundra/TundraFinalCinematic.unity
+    guid: f88bc03511b63e34684f161b21717920
+  - enabled: 1
+    path: Assets/Scenes/Jungle/JungleLevel1.unity
+    guid: 94af591a3705eca48827d1cb38d34089
+  - enabled: 1
+    path: Assets/Scenes/Jungle/JungleLevel2.unity
+    guid: 4bd5764f0aa10d347817dae053e808ab
+  - enabled: 1
+    path: Assets/Scenes/Jungle/JungleLevel3.unity
+    guid: dd3b27c198255044ea9710be7e15cc5d
+  - enabled: 1
+    path: Assets/Scenes/FinalCinematic.unity
+    guid: b013c7f8e1c1acf4f8e9ef97e2e2913a
+  - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   m_configObjects:

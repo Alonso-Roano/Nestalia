@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05638a5a9ba09074db7e64fa72a3c000, type: 3}
+  m_Name: AwsomeCartel
+  m_EditorClassIdentifier: Assembly-CSharp::DialogeRound
+  dialogeTurnList:
+  - <Character>k__BackingField: {fileID: 11400000, guid: 2dca9bb96629baf40b4d58407fe6c5a3, type: 2}
+    dialogueLine: "Mira esto. \xA1Un cartel! Es lo \xFAnico que no est\xE1 cubierto
+      de arena por aqu\xED."
+  - <Character>k__BackingField: {fileID: 11400000, guid: 700d7c27b6b2a2846980f5d214bd7803, type: 2}
+    dialogueLine: "Si hay algo de informaci\xF3n \xFAtil, ser\xE1 mejor leerlo. Creo
+      que puedo hacerlo si me concentro y pulso E."

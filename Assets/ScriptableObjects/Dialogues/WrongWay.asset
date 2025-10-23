@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05638a5a9ba09074db7e64fa72a3c000, type: 3}
+  m_Name: WrongWay
+  m_EditorClassIdentifier: Assembly-CSharp::DialogeRound
+  dialogeTurnList:
+  - <Character>k__BackingField: {fileID: 11400000, guid: 5d5a0c260c94a9e48ad455b00eed88b9, type: 2}
+    dialogueLine: No creo que deba ir en esa direccion
+  - <Character>k__BackingField: {fileID: 11400000, guid: 66bdbac23374d964e981eb50d6696053, type: 2}
+    dialogueLine: Creo que vi algo a la derecha
+  - <Character>k__BackingField: {fileID: 11400000, guid: 6cc1b303b4741b24da74d93926d71db5, type: 2}
+    dialogueLine: Deberia ir en esa direccion

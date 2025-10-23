@@ -15,10 +15,7 @@ public class BlettleAI : MonoBehaviour
 
     private EnemyMovement movement;
     private EnemyAttack_Lunge attack;
-
     private Transform playerTransform;
-    private Transform target;
-
     private Vector3 startPosition;
     private int patrolDirection = 1;
 
@@ -31,117 +28,110 @@ public class BlettleAI : MonoBehaviour
     private void Start()
     {
         startPosition = transform.position;
-
-        // --- CAMBIO: Buscamos al jugador pero no lo asignamos como objetivo activo ---
         GameObject playerObject = GameObject.FindGameObjectWithTag("Player");
         if (playerObject != null)
         {
-            // Guardamos la referencia, pero 'target' sigue siendo null
-            playerTransform = playerObject.transform;
+            playerTransform = playerObject.transform;
         }
     }
 
-    // Nos suscribimos al evento para saber cuándo termina un ataque
     private void OnEnable() => attack.OnAttackFinished += HandleAttackFinished;
     private void OnDisable() => attack.OnAttackFinished -= HandleAttackFinished;
 
+    // Update ahora es mucho más simple.
     void Update()
     {
-        // La máquina de estados solo se actualiza si no estamos en medio de un ataque
-        if (currentState != EnemyState.Attacking)
+        if (Time.timeScale == 0f)
         {
-            HandleStateTransitions();
+            if (movement != null)
+            {
+                movement.Stop();
+            }
+            return;
         }
-
-        HandleAI();
+        switch (currentState)
+        {
+            case EnemyState.Patrol:
+                PatrolBehavior();
+                break;
+            case EnemyState.Chase:
+                ChaseBehavior();
+                break;
+            case EnemyState.Attacking:
+                break;
+        }
     }
 
-    // --- CAMBIO: Lógica de transición de estados reestructurada ---
-    private void HandleStateTransitions()
+    private void ChangeState(EnemyState newState)
     {
-        // Si no hay jugador en la escena, no hacemos nada más que patrullar
-        if (playerTransform == null)
+        if (currentState == newState) return;
+        currentState = newState;
+    }
+
+    private void PatrolBehavior()
+    {
+        // 1. Lógica de transición
+        if (playerTransform != null && Vector2.Distance(transform.position, playerTransform.position) <= detectionRange)
         {
-            currentState = EnemyState.Patrol;
+            ChangeState(EnemyState.Chase);
+            return;
+        }
+
+        // 2. Lógica de acción
+        movement.Move(new Vector2(patrolDirection, 0));
+        if (Mathf.Abs(transform.position.x - startPosition.x) >= patrolDistance)
+        {
+            patrolDirection *= -1;
+            startPosition = transform.position;
+        }
+    }
+
+    private void ChaseBehavior()
+    {
+        if (playerTransform == null)
+        {
+            ChangeState(EnemyState.Patrol);
             return;
         }
 
         float distanceToPlayer = Vector2.Distance(transform.position, playerTransform.position);
 
-        // 1. Decidir si tenemos un objetivo activo basado en el rango de detección
-        if (distanceToPlayer <= detectionRange)
+        // 1. Lógica de transición
+        if (distanceToPlayer <= attackRange && attack.CanAttack())
         {
-            target = playerTransform; // El jugador está cerca, es nuestro objetivo
-        }
-        else
+            AttackBehavior(); // Llamamos directamente a la acción de atacar
+            return;
+        }
+        
+        if (distanceToPlayer > detectionRange)
         {
-            target = null; // El jugador está lejos, lo perdemos de vista
-        }
+            ChangeState(EnemyState.Patrol);
+            return;
+        }
 
-        // 2. Decidir el estado basado en si tenemos un objetivo
-        if (target != null)
-        {
-            // Si tenemos objetivo y está en rango de ataque, atacamos
-            if (distanceToPlayer <= attackRange && attack.CanAttack())
-            {
-                currentState = EnemyState.Attacking;
-            }
-            // Si no, lo perseguimos
-            else
-            {
-                currentState = EnemyState.Chase;
-            }
-        }
-        else
-        {
-            // Si no tenemos objetivo, patrullamos
-            currentState = EnemyState.Patrol;
-        }
+        // 2. Lógica de acción
+        Vector2 direction = (playerTransform.position - transform.position).normalized;
+        movement.Move(direction, 1.5f);
     }
 
-    private void HandleAI()
+    private void AttackBehavior()
     {
-        switch (currentState)
-        {
-            case EnemyState.Patrol:
-                Patrol();
-                break;
-            case EnemyState.Chase:
-                Chase();
-                break;
-            case EnemyState.Attacking:
-                movement.Stop();
-                attack.PerformAttack(target);
-                break;
-        }
+        ChangeState(EnemyState.Attacking);
+        movement.Stop();
+        attack.PerformAttack(playerTransform);
     }
 
-    private void Patrol()
-    {
-        movement.Move(new Vector2(patrolDirection, 0));
-
-        // Lógica para cambiar de dirección
-        if (Mathf.Abs(transform.position.x - startPosition.x) >= patrolDistance)
-        {
-            patrolDirection *= -1; // Invertir dirección
-            // Reseteamos la posición de referencia para medir la distancia desde el nuevo punto
-            startPosition = transform.position;
-        }
-    }
-
-    private void Chase()
-    {
-        if (target == null) return;
-
-        // Le decimos al componente de movimiento que se mueva hacia el jugador
-        Vector2 direction = (target.position - transform.position).normalized;
-        movement.Move(direction, 1.5f); // Usamos un multiplicador para ir más rápido
-    }
-
-    // Este método se ejecuta cuando el componente de ataque nos avisa que ha terminado
     private void HandleAttackFinished()
     {
-        // --- CAMBIO: En lugar de solo volver a Chase, re-evaluamos la situación ---
-        HandleStateTransitions();
+        // Cuando el ataque termina, decidimos qué hacer a continuación.
+        // Volver a Chase es una opción segura si el jugador sigue cerca.
+        if (playerTransform != null && Vector2.Distance(transform.position, playerTransform.position) <= detectionRange)
+        {
+            ChangeState(EnemyState.Chase);
+        }
+        else
+        {
+            ChangeState(EnemyState.Patrol);
+        }
     }
 }

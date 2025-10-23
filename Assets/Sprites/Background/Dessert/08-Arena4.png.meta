@@ -3,8 +3,8 @@ guid: dfc1a897b101cb040a04450ed5e13c5a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7175667440770918975
-    second: 08-Arena4_0
+      213: 4734324463646999739
+    second: 08-arena4_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,8 +46,8 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
-  spriteExtrude: 1
+  spriteMode: 2
+  spriteExtrude: 0
   spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
@@ -100,23 +100,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 08-Arena4_0
+      name: 08-arena4_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 320
-        height: 76
+        height: 180
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1c5538e1b78ea6c90800000000000000
-      internalID: -7175667440770918975
+      spriteID: bb40f132403b3b140800000000000000
+      internalID: 4734324463646999739
       vertices: []
       indices: 
       edges: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 8654f5b9e8613d94b90f25cdb25ff107
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      08-Arena4_0: -7175667440770918975
+      08-arena4_0: 4734324463646999739
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

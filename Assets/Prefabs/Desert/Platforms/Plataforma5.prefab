@@ -1,0 +1,75 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &8601088602743872680
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 883917758833126886, guid: 528b83ed651f96543a03802132bc973c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 914.7607
+      objectReference: {fileID: 0}
+    - target: {fileID: 883917758833126886, guid: 528b83ed651f96543a03802132bc973c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -33.625473
+      objectReference: {fileID: 0}
+    - target: {fileID: 883917758833126886, guid: 528b83ed651f96543a03802132bc973c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 883917758833126886, guid: 528b83ed651f96543a03802132bc973c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 883917758833126886, guid: 528b83ed651f96543a03802132bc973c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 883917758833126886, guid: 528b83ed651f96543a03802132bc973c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 883917758833126886, guid: 528b83ed651f96543a03802132bc973c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 883917758833126886, guid: 528b83ed651f96543a03802132bc973c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 883917758833126886, guid: 528b83ed651f96543a03802132bc973c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 883917758833126886, guid: 528b83ed651f96543a03802132bc973c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1785184400697060495, guid: 528b83ed651f96543a03802132bc973c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 129
+      objectReference: {fileID: 0}
+    - target: {fileID: 3286095952209318315, guid: 528b83ed651f96543a03802132bc973c, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 3.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6049941183585273143, guid: 528b83ed651f96543a03802132bc973c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 234
+      objectReference: {fileID: 0}
+    - target: {fileID: 6890566650567562804, guid: 528b83ed651f96543a03802132bc973c, type: 3}
+      propertyPath: m_Size.x
+      value: 3.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8575119802844020354, guid: 528b83ed651f96543a03802132bc973c, type: 3}
+      propertyPath: m_Name
+      value: PlataformaDesierto (2) Variant
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 528b83ed651f96543a03802132bc973c, type: 3}

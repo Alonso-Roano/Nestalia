@@ -3,8 +3,8 @@ guid: 944b70d06055820409b19b704bbcdbc0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6897098165724499618
-    second: 01-Cielo_0
+      213: -6937892007361663381
+    second: 01-cielo_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,8 +46,8 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
-  spriteExtrude: 1
+  spriteMode: 2
+  spriteExtrude: 11
   spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
@@ -100,7 +100,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 01-Cielo_0
+      name: 01-cielo_0
       rect:
         serializedVersion: 2
         x: 0
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e513efab2c59840a0800000000000000
-      internalID: -6897098165724499618
+      spriteID: b6eaf235af7a7bf90800000000000000
+      internalID: -6937892007361663381
       vertices: []
       indices: 
       edges: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      01-Cielo_0: -6897098165724499618
+      01-cielo_0: -6937892007361663381
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

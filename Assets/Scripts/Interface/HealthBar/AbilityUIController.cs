@@ -18,6 +18,21 @@ public class AbilityUIController : MonoBehaviour
     private bool glideColorState = false;
     private bool climbColorState = false;
 
+    void Awake()
+    {
+        GameData loadedData = DataManager.Instance.LoadGame();
+        if (loadedData != null)
+        {
+            if (loadedData.hasDoubleJump) SetDoubleJumpVisible(false);
+            if (loadedData.hasSlowFall) SetGlideVisible(false);
+            if (loadedData.hasWallClimb) SetClimbVisible(false);
+        }
+        else
+        {
+            Debug.LogError("No se pudo cargar la partida porque no se encontró el archivo de guardado.");
+        }
+    }
+
     public void SetDoubleJumpVisible(bool isVisible)
     {
         if (isVisible != doubleJumpVisibleState)

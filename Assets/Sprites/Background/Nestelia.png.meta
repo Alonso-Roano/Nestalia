@@ -1,0 +1,871 @@
+fileFormatVersion: 2
+guid: d283d48b5dc0d3d40859ef0c0977624d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8094888233370501248
+    second: Nestelia_0
+  - first:
+      213: 9084452091243998027
+    second: Nestelia_1
+  - first:
+      213: -7572964212515506606
+    second: Nestelia_2
+  - first:
+      213: 4784091951358463353
+    second: Nestelia_3
+  - first:
+      213: -4604635385253568513
+    second: Nestelia_4
+  - first:
+      213: 6895335389651964391
+    second: Nestelia_5
+  - first:
+      213: 1505208284001851040
+    second: Nestelia_6
+  - first:
+      213: 502400887602048019
+    second: Nestelia_7
+  - first:
+      213: -6818790360521760551
+    second: Nestelia_8
+  - first:
+      213: 5049395505751692587
+    second: Nestelia_9
+  - first:
+      213: 709830670014919782
+    second: Nestelia_10
+  - first:
+      213: -7314650700924109378
+    second: Nestelia_11
+  - first:
+      213: 338082986318566186
+    second: Nestelia_12
+  - first:
+      213: -7755824697936102010
+    second: Nestelia_13
+  - first:
+      213: 7137672965492869132
+    second: Nestelia_14
+  - first:
+      213: -2916463662478661771
+    second: Nestelia_15
+  - first:
+      213: 2659206424614721743
+    second: Nestelia_16
+  - first:
+      213: -2596022302807252876
+    second: Nestelia_17
+  - first:
+      213: -3492097706477693088
+    second: Nestelia_18
+  - first:
+      213: 9017734684449136965
+    second: Nestelia_19
+  - first:
+      213: 4353263258775821528
+    second: Nestelia_20
+  - first:
+      213: -3240578958853398987
+    second: Nestelia_21
+  - first:
+      213: 9102263322379601667
+    second: Nestelia_22
+  - first:
+      213: -8482589683204579381
+    second: Nestelia_23
+  - first:
+      213: 2585846168992060823
+    second: Nestelia_24
+  - first:
+      213: 3346241368369640453
+    second: Nestelia_25
+  - first:
+      213: -4300389555442094554
+    second: Nestelia_26
+  - first:
+      213: -5597382272548036640
+    second: Nestelia_27
+  - first:
+      213: -5317647547950074842
+    second: Nestelia_28
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Nestelia_0
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 947
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08f36715a0e29af80800000000000000
+      internalID: -8094888233370501248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nestelia_1
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 939
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4b27a5ab05721e70800000000000000
+      internalID: 9084452091243998027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nestelia_2
+      rect:
+        serializedVersion: 2
+        x: 709
+        y: 947
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25674480c2d67e690800000000000000
+      internalID: -7572964212515506606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nestelia_3
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 926
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97dc6855842846240800000000000000
+      internalID: 4784091951358463353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nestelia_4
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 933
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fff54c5738c0910c0800000000000000
+      internalID: -4604635385253568513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nestelia_5
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 931
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e1926bf00721bf50800000000000000
+      internalID: 6895335389651964391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nestelia_6
+      rect:
+        serializedVersion: 2
+        x: 547
+        y: 925
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a6d7e895f293e410800000000000000
+      internalID: 1505208284001851040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nestelia_7
+      rect:
+        serializedVersion: 2
+        x: 646
+        y: 930
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31c6c5802f2e8f600800000000000000
+      internalID: 502400887602048019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nestelia_8
+      rect:
+        serializedVersion: 2
+        x: 757
+        y: 933
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d02e3b6b4ace51a0800000000000000
+      internalID: -6818790360521760551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nestelia_9
+      rect:
+        serializedVersion: 2
+        x: 848
+        y: 927
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2598caa57e031640800000000000000
+      internalID: 5049395505751692587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nestelia_10
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 768
+        width: 120
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 664bae8cb33d9d900800000000000000
+      internalID: 709830670014919782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nestelia_11
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 768
+        width: 101
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ebd3b5331f32d7a90800000000000000
+      internalID: -7314650700924109378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nestelia_12
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 765
+        width: 108
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a231f105fac11b400800000000000000
+      internalID: 338082986318566186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nestelia_13
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 769
+        width: 118
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68d31538786cd5490800000000000000
+      internalID: -7755824697936102010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nestelia_14
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 869
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c088c1fbebb1e0360800000000000000
+      internalID: 7137672965492869132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nestelia_15
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 763
+        width: 100
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 577ef9540c3a687d0800000000000000
+      internalID: -2916463662478661771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nestelia_16
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 768
+        width: 101
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc8d893772667e420800000000000000
+      internalID: 2659206424614721743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nestelia_17
+      rect:
+        serializedVersion: 2
+        x: 745
+        y: 769
+        width: 46
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 470ae2c487319fbd0800000000000000
+      internalID: -2596022302807252876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nestelia_18
+      rect:
+        serializedVersion: 2
+        x: 791
+        y: 768
+        width: 138
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 067d07c43a3998fc0800000000000000
+      internalID: -3492097706477693088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nestelia_19
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 817
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5416f41eaed652d70800000000000000
+      internalID: 9017734684449136965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nestelia_20
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 749
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8dc97198ed5e96c30800000000000000
+      internalID: 4353263258775821528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nestelia_21
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 754
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53e10f23b962703d0800000000000000
+      internalID: -3240578958853398987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nestelia_22
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 754
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 307c08e044cb15e70800000000000000
+      internalID: 9102263322379601667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nestelia_23
+      rect:
+        serializedVersion: 2
+        x: 493
+        y: 753
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bcf923530a9c74a80800000000000000
+      internalID: -8482589683204579381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nestelia_24
+      rect:
+        serializedVersion: 2
+        x: 741
+        y: 747
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 795939ae365c2e320800000000000000
+      internalID: 2585846168992060823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nestelia_25
+      rect:
+        serializedVersion: 2
+        x: 871
+        y: 751
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 504b36e9bcc307e20800000000000000
+      internalID: 3346241368369640453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nestelia_26
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 745
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62ee218db72f154c0800000000000000
+      internalID: -4300389555442094554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nestelia_27
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 741
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ef94b4ba7a1252b0800000000000000
+      internalID: -5597382272548036640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nestelia_28
+      rect:
+        serializedVersion: 2
+        x: 599
+        y: 741
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62475bfaabbe336b0800000000000000
+      internalID: -5317647547950074842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Nestelia_0: -8094888233370501248
+      Nestelia_1: 9084452091243998027
+      Nestelia_10: 709830670014919782
+      Nestelia_11: -7314650700924109378
+      Nestelia_12: 338082986318566186
+      Nestelia_13: -7755824697936102010
+      Nestelia_14: 7137672965492869132
+      Nestelia_15: -2916463662478661771
+      Nestelia_16: 2659206424614721743
+      Nestelia_17: -2596022302807252876
+      Nestelia_18: -3492097706477693088
+      Nestelia_19: 9017734684449136965
+      Nestelia_2: -7572964212515506606
+      Nestelia_20: 4353263258775821528
+      Nestelia_21: -3240578958853398987
+      Nestelia_22: 9102263322379601667
+      Nestelia_23: -8482589683204579381
+      Nestelia_24: 2585846168992060823
+      Nestelia_25: 3346241368369640453
+      Nestelia_26: -4300389555442094554
+      Nestelia_27: -5597382272548036640
+      Nestelia_28: -5317647547950074842
+      Nestelia_3: 4784091951358463353
+      Nestelia_4: -4604635385253568513
+      Nestelia_5: 6895335389651964391
+      Nestelia_6: 1505208284001851040
+      Nestelia_7: 502400887602048019
+      Nestelia_8: -6818790360521760551
+      Nestelia_9: 5049395505751692587
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

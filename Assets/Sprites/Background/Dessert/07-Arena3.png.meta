@@ -3,8 +3,8 @@ guid: 98263b5ac0e6dab41ac40836ed8a19a5
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -347918716106647330
-    second: 07-Arena3_0
+      213: 7227806867070176604
+    second: 07-arena3_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 0
   alignment: 0
@@ -100,23 +100,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 07-Arena3_0
+      name: 07-arena3_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 320
-        height: 92
+        height: 180
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ed8d0c365c1fb2bf0800000000000000
-      internalID: -347918716106647330
+      spriteID: c5dc8d01d045e4460800000000000000
+      internalID: 7227806867070176604
       vertices: []
       indices: 
       edges: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: afcdc03574393d64080792bd98ae6b80
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      07-Arena3_0: -347918716106647330
+      07-arena3_0: 7227806867070176604
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,0 +1,99 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05638a5a9ba09074db7e64fa72a3c000, type: 3}
+  m_Name: Flamenco_1
+  m_EditorClassIdentifier: Assembly-CSharp::DialogeRound
+  dialogeTurnList:
+  - <Character>k__BackingField: {fileID: 11400000, guid: bde7a36d04b4ffb49aefc1a82094e81f, type: 2}
+    dialogueLine: "\xA1Hey! \xA1Oye t\xFA!\nCre\xED que eras una roca."
+  - <Character>k__BackingField: {fileID: 11400000, guid: 10543a6cd36611d44a964b02b76245a5, type: 2}
+    dialogueLine: "\xBFQuien dice que no lo soy?"
+  - <Character>k__BackingField: {fileID: 11400000, guid: 828e2ee2d4de07e48bf60404b49c5a7d, type: 2}
+    dialogueLine: "Bueno\u2026 las rocas no hablan."
+  - <Character>k__BackingField: {fileID: 11400000, guid: 747026b81bd64934dbc0bfc007729bd1, type: 2}
+    dialogueLine: "Depende. Algunas son m\xE1s interesantes."
+  - <Character>k__BackingField: {fileID: 11400000, guid: 700d7c27b6b2a2846980f5d214bd7803, type: 2}
+    dialogueLine: "\u2026\nSoy Bubo, por cierto."
+  - <Character>k__BackingField: {fileID: 11400000, guid: 90a4e6c04506e824aa5a223ca18ebb17, type: 2}
+    dialogueLine: "\u2026"
+  - <Character>k__BackingField: {fileID: 11400000, guid: 5fd095cd22327504e8899b8b5eccea91, type: 2}
+    dialogueLine: "\xBFY t\xFA?"
+  - <Character>k__BackingField: {fileID: 11400000, guid: 7e133b145f6d7be45ba8f25683e3e231, type: 2}
+    dialogueLine: No hace falta.
+  - <Character>k__BackingField: {fileID: 11400000, guid: 5fd095cd22327504e8899b8b5eccea91, type: 2}
+    dialogueLine: "\xBFNo hace falta qu\xE9?"
+  - <Character>k__BackingField: {fileID: 11400000, guid: c0978d234a2dac2428c8455249dfd82b, type: 2}
+    dialogueLine: "Saber mi nombre. No te servir\xE1 de nada."
+  - <Character>k__BackingField: {fileID: 11400000, guid: 5d5a0c260c94a9e48ad455b00eed88b9, type: 2}
+    dialogueLine: "Eres un tipo simp\xE1tico."
+  - <Character>k__BackingField: {fileID: 11400000, guid: bce616a90ffe9f64189556c7c340971b, type: 2}
+    dialogueLine: "Lo s\xE9."
+  - <Character>k__BackingField: {fileID: 11400000, guid: 4f9cceb153b178c43a9f3d07a6800380, type: 2}
+    dialogueLine: "\xBFVives aqu\xED?"
+  - <Character>k__BackingField: {fileID: 11400000, guid: 572bbc2958d51ad42a610e3d284ceb22, type: 2}
+    dialogueLine: "\u201CVivir\u201D es una palabra fuerte. Digamos que sigo respirando."
+  - <Character>k__BackingField: {fileID: 11400000, guid: bbba43b96297c2343b702abdde066254, type: 2}
+    dialogueLine: "Yo estoy buscando un lugar con sombra, agua\u2026 algo que no
+      me mate."
+  - <Character>k__BackingField: {fileID: 11400000, guid: 7e133b145f6d7be45ba8f25683e3e231, type: 2}
+    dialogueLine: Suerte. El desierto no es muy hospitalario.
+  - <Character>k__BackingField: {fileID: 11400000, guid: 483471fc764eed54c81f7c30b99b84c6, type: 2}
+    dialogueLine: "Debe haber algo. Un arroyo, una cueva\u2026 un nido olvidado."
+  - <Character>k__BackingField: {fileID: 11400000, guid: c071facedec439d4c8d979e1fa651f96, type: 2}
+    dialogueLine: "Si hay algo, no quiere que lo encuentres. Pero la vida a\xFAn
+      crece aqu\xED. Si miras bien, la notar\xE1s."
+  - <Character>k__BackingField: {fileID: 11400000, guid: 5fd095cd22327504e8899b8b5eccea91, type: 2}
+    dialogueLine: "\xBFD\xF3nde deber\xEDa mirar?"
+  - <Character>k__BackingField: {fileID: 11400000, guid: c0978d234a2dac2428c8455249dfd82b, type: 2}
+    dialogueLine: "Donde nadie m\xE1s lo har\xEDa. Bajo las piedras, entre los huesos,
+      en los lugares que huelen mal.\nLa supervivencia no tiene buen aspecto, pero
+      funciona."
+  - <Character>k__BackingField: {fileID: 11400000, guid: 483471fc764eed54c81f7c30b99b84c6, type: 2}
+    dialogueLine: "Suena\u2026 alentador."
+  - <Character>k__BackingField: {fileID: 11400000, guid: 747026b81bd64934dbc0bfc007729bd1, type: 2}
+    dialogueLine: No vine a alentarte.
+  - <Character>k__BackingField: {fileID: 11400000, guid: 6cc1b303b4741b24da74d93926d71db5, type: 2}
+    dialogueLine: "Podr\xEDas hacerlo igual."
+  - <Character>k__BackingField: {fileID: 11400000, guid: 90a4e6c04506e824aa5a223ca18ebb17, type: 2}
+    dialogueLine: "Podr\xEDa, pero no quiero."
+  - <Character>k__BackingField: {fileID: 11400000, guid: 64589a558c9903f41a1ac73665de65bb, type: 2}
+    dialogueLine: "Deber\xEDas cuidar un poco tu carisma."
+  - <Character>k__BackingField: {fileID: 11400000, guid: 572bbc2958d51ad42a610e3d284ceb22, type: 2}
+    dialogueLine: "\xBFPara qu\xE9? No hay nadie m\xE1s que t\xFA aqu\xED. Y t\xFA
+      probablemente morir\xE1s."
+  - <Character>k__BackingField: {fileID: 11400000, guid: 5d5a0c260c94a9e48ad455b00eed88b9, type: 2}
+    dialogueLine: Gracias por la confianza.
+  - <Character>k__BackingField: {fileID: 11400000, guid: bce616a90ffe9f64189556c7c340971b, type: 2}
+    dialogueLine: De nada.
+  - <Character>k__BackingField: {fileID: 11400000, guid: 5fd095cd22327504e8899b8b5eccea91, type: 2}
+    dialogueLine: "Entonces, \xBFsolo caminas sin rumbo?"
+  - <Character>k__BackingField: {fileID: 11400000, guid: bce616a90ffe9f64189556c7c340971b, type: 2}
+    dialogueLine: Sin rumbo, pero con estilo.
+  - <Character>k__BackingField: {fileID: 11400000, guid: fcef7316d43e9444ebae0b16d6a799c2, type: 2}
+    dialogueLine: Tienes un estilo deprimente.
+  - <Character>k__BackingField: {fileID: 11400000, guid: 328ff54c4841af24b9ebb31fd8131518, type: 2}
+    dialogueLine: "Funciona. Estoy vivo, \xBFno?"
+  - <Character>k__BackingField: {fileID: 11400000, guid: 828e2ee2d4de07e48bf60404b49c5a7d, type: 2}
+    dialogueLine: Por ahora.
+  - <Character>k__BackingField: {fileID: 11400000, guid: 747026b81bd64934dbc0bfc007729bd1, type: 2}
+    dialogueLine: "Aj\xE1. Pues sigue caminando. Si el desierto no te traga, tal
+      vez encuentres algo que valga la pena."
+  - <Character>k__BackingField: {fileID: 11400000, guid: 5fd095cd22327504e8899b8b5eccea91, type: 2}
+    dialogueLine: "\xBFY t\xFA?"
+  - <Character>k__BackingField: {fileID: 11400000, guid: 7e133b145f6d7be45ba8f25683e3e231, type: 2}
+    dialogueLine: "Yo ya encontr\xE9 lo que buscaba. Silencio"
+  - <Character>k__BackingField: {fileID: 11400000, guid: 483471fc764eed54c81f7c30b99b84c6, type: 2}
+    dialogueLine: "Qu\xE9 inspirador."
+  - <Character>k__BackingField: {fileID: 11400000, guid: fe75de5362ee13c4889d36b4fa939ae9, type: 2}
+    dialogueLine: "Con suerte, no volver\xE9 a verte."
+  - <Character>k__BackingField: {fileID: 11400000, guid: 700d7c27b6b2a2846980f5d214bd7803, type: 2}
+    dialogueLine: "Con suerte, yo s\xED."

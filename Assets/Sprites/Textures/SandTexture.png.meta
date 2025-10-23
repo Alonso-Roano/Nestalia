@@ -1,0 +1,1127 @@
+fileFormatVersion: 2
+guid: 7371a8cbfc293ea42b959dcd4ec39fdc
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6410642125328099250
+    second: SandTexture_0
+  - first:
+      213: -2954496026364381719
+    second: SandTexture_1
+  - first:
+      213: -8495713358252696255
+    second: SandTexture_2
+  - first:
+      213: -1009971106911601161
+    second: SandTexture_3
+  - first:
+      213: -6298626765582144690
+    second: SandTexture_4
+  - first:
+      213: -5122868236120387732
+    second: SandTexture_5
+  - first:
+      213: 4172283340569883247
+    second: SandTexture_6
+  - first:
+      213: 4640125331277369324
+    second: SandTexture_7
+  - first:
+      213: 8347677356908154042
+    second: SandTexture_8
+  - first:
+      213: 4466521707232038859
+    second: SandTexture_9
+  - first:
+      213: -5476945852714662312
+    second: SandTexture_10
+  - first:
+      213: -4301548661460858043
+    second: SandTexture_11
+  - first:
+      213: 6853937618015977703
+    second: SandTexture_12
+  - first:
+      213: -4102395735981483012
+    second: SandTexture_13
+  - first:
+      213: -6895601265720361298
+    second: SandTexture_14
+  - first:
+      213: 5508934407016380552
+    second: SandTexture_15
+  - first:
+      213: 744422854109200221
+    second: SandTexture_16
+  - first:
+      213: -2868360600295485507
+    second: SandTexture_17
+  - first:
+      213: 3286322633211550624
+    second: SandTexture_18
+  - first:
+      213: 5125909307472529969
+    second: SandTexture_19
+  - first:
+      213: -6814000097259655609
+    second: SandTexture_20
+  - first:
+      213: 6369535012959498651
+    second: SandTexture_21
+  - first:
+      213: 9172792666581164527
+    second: SandTexture_22
+  - first:
+      213: -8790767492907981282
+    second: SandTexture_23
+  - first:
+      213: -2727449970367386587
+    second: SandTexture_24
+  - first:
+      213: 6003884090316712585
+    second: SandTexture_25
+  - first:
+      213: -2760642427881567612
+    second: SandTexture_26
+  - first:
+      213: 7326454895837550688
+    second: SandTexture_27
+  - first:
+      213: 9123240385250219861
+    second: SandTexture_28
+  - first:
+      213: 5547385639819764018
+    second: SandTexture_29
+  - first:
+      213: 3522579472059705085
+    second: SandTexture_30
+  - first:
+      213: 1490084583755698306
+    second: SandTexture_31
+  - first:
+      213: 7635567194220134757
+    second: SandTexture_32
+  - first:
+      213: -801209058165330540
+    second: SandTexture_33
+  - first:
+      213: -2177308627399325948
+    second: SandTexture_34
+  - first:
+      213: -6155285203362487481
+    second: SandTexture_35
+  - first:
+      213: 774576660237504222
+    second: SandTexture_36
+  - first:
+      213: -5543254957815098396
+    second: SandTexture_37
+  - first:
+      213: -7732018522278098265
+    second: SandTexture_38
+  - first:
+      213: -2129751259812390720
+    second: SandTexture_39
+  - first:
+      213: -488295359812501917
+    second: SandTexture_40
+  - first:
+      213: 391795194062961994
+    second: SandTexture_41
+  - first:
+      213: -5607280177196281113
+    second: SandTexture_42
+  - first:
+      213: 5122459174084242595
+    second: SandTexture_43
+  - first:
+      213: -424603681502839112
+    second: SandTexture_44
+  - first:
+      213: -1037030851235426226
+    second: SandTexture_45
+  - first:
+      213: -6327718924081966460
+    second: SandTexture_46
+  - first:
+      213: -3593105226689580976
+    second: SandTexture_47
+  - first:
+      213: 4112319516051548479
+    second: SandTexture_48
+  - first:
+      213: 7855779818608025224
+    second: SandTexture_49
+  - first:
+      213: -6869518504641767325
+    second: SandTexture_50
+  - first:
+      213: 5196731531388761954
+    second: SandTexture_51
+  - first:
+      213: 5074953233113407079
+    second: SandTexture_52
+  - first:
+      213: 3320876965506841565
+    second: SandTexture_53
+  - first:
+      213: -5465554236988370489
+    second: SandTexture_54
+  - first:
+      213: -7164877122278706315
+    second: SandTexture_55
+  - first:
+      213: -2150643395365847770
+    second: SandTexture_56
+  - first:
+      213: 84886139867538797
+    second: SandTexture_57
+  - first:
+      213: -6810159418603746838
+    second: SandTexture_58
+  - first:
+      213: 5406079766539749505
+    second: SandTexture_59
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 1
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SandTexture_0
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 935
+        width: 68
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b726564c0d27f850800000000000000
+      internalID: 6410642125328099250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SandTexture_5
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 931
+        width: 71
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6f89ea3b7ae7e8b0800000000000000
+      internalID: -5122868236120387732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SandTexture_8
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 926
+        width: 81
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abc05160458e8d370800000000000000
+      internalID: 8347677356908154042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SandTexture_9
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 927
+        width: 71
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bcf032df3d54cfd30800000000000000
+      internalID: 4466521707232038859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SandTexture_10
+      rect:
+        serializedVersion: 2
+        x: 508
+        y: 939
+        width: 65
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 856c4ead3cafdf3b0800000000000000
+      internalID: -5476945852714662312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SandTexture_19
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 837
+        width: 72
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13ac4ce5b53e22740800000000000000
+      internalID: 5125909307472529969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SandTexture_21
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 837
+        width: 125
+        height: 82
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b913dd7d852256850800000000000000
+      internalID: 6369535012959498651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SandTexture_22
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 842
+        width: 77
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe1e0e9a45e4c4f70800000000000000
+      internalID: 9172792666581164527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SandTexture_27
+      rect:
+        serializedVersion: 2
+        x: 632
+        y: 763
+        width: 99
+        height: 79
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 068915919ebcca560800000000000000
+      internalID: 7326454895837550688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SandTexture_28
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 738
+        width: 65
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 557565b1bc24c9e70800000000000000
+      internalID: 9123240385250219861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SandTexture_29
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 752
+        width: 105
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2316f8d19d54cfc40800000000000000
+      internalID: 5547385639819764018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SandTexture_30
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 751
+        width: 95
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df6a33dcd57b2e030800000000000000
+      internalID: 3522579472059705085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SandTexture_31
+      rect:
+        serializedVersion: 2
+        x: 519
+        y: 757
+        width: 87
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2805b0cb808dda410800000000000000
+      internalID: 1490084583755698306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SandTexture_32
+      rect:
+        serializedVersion: 2
+        x: 758
+        y: 757
+        width: 106
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5610e1e78ebf6f960800000000000000
+      internalID: 7635567194220134757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SandTexture_33
+      rect:
+        serializedVersion: 2
+        x: 888
+        y: 761
+        width: 100
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49dea394b9881e4f0800000000000000
+      internalID: -801209058165330540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SandTexture_34
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 670
+        width: 78
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4074879d655a8c1e0800000000000000
+      internalID: -2177308627399325948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SandTexture_35
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 672
+        width: 82
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7436c5a38b8049aa0800000000000000
+      internalID: -6155285203362487481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SandTexture_36
+      rect:
+        serializedVersion: 2
+        x: 764
+        y: 672
+        width: 90
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: edec3cc5e59dfba00800000000000000
+      internalID: 774576660237504222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SandTexture_37
+      rect:
+        serializedVersion: 2
+        x: 883
+        y: 672
+        width: 104
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e3120c3cf66213b0800000000000000
+      internalID: -5543254957815098396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SandTexture_40
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 557
+        width: 56
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36e77e415f93939f0800000000000000
+      internalID: -488295359812501917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SandTexture_43
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 563
+        width: 62
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ac6bb79a71a61740800000000000000
+      internalID: 5122459174084242595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SandTexture_44
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 559
+        width: 50
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8be33b983318b1af0800000000000000
+      internalID: -424603681502839112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SandTexture_45
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 560
+        width: 60
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e40ddfa6fe9bb91f0800000000000000
+      internalID: -1037030851235426226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SandTexture_46
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 555
+        width: 57
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 482d39b0a2d6f28a0800000000000000
+      internalID: -6327718924081966460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SandTexture_47
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 560
+        width: 51
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 050719a55d9b22ec0800000000000000
+      internalID: -3593105226689580976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SandTexture_48
+      rect:
+        serializedVersion: 2
+        x: 494
+        y: 559
+        width: 53
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f39a825dfc4e11930800000000000000
+      internalID: 4112319516051548479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SandTexture_50
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 497
+        width: 59
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 368dad8f0519aa0a0800000000000000
+      internalID: -6869518504641767325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SandTexture_51
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 494
+        width: 49
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 267bf795bcf7e1840800000000000000
+      internalID: 5196731531388761954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SandTexture_52
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 492
+        width: 51
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76ed177c31bdd6640800000000000000
+      internalID: 5074953233113407079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SandTexture_53
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 495
+        width: 49
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ddbffcf5100261e20800000000000000
+      internalID: 3320876965506841565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SandTexture_54
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 430
+        width: 56
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c15da311637624b0800000000000000
+      internalID: -5465554236988370489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SandTexture_56
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 366
+        width: 53
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62dbdacf9316722e0800000000000000
+      internalID: -2150643395365847770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SandTexture_57
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 300
+        width: 65
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d65a8259e739d2100800000000000000
+      internalID: 84886139867538797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SandTexture_58
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 300
+        width: 55
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae9c75e27147d71a0800000000000000
+      internalID: -6810159418603746838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SandTexture_59
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 300
+        width: 65
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1884700b7e0460b40800000000000000
+      internalID: 5406079766539749505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 38a778bb82b762349908b9514a0ff4e4
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      SandTexture_0: 6410642125328099250
+      SandTexture_1: -2954496026364381719
+      SandTexture_10: -5476945852714662312
+      SandTexture_11: -4301548661460858043
+      SandTexture_12: 6853937618015977703
+      SandTexture_13: -4102395735981483012
+      SandTexture_14: -6895601265720361298
+      SandTexture_15: 5508934407016380552
+      SandTexture_16: 744422854109200221
+      SandTexture_17: -2868360600295485507
+      SandTexture_18: 3286322633211550624
+      SandTexture_19: 5125909307472529969
+      SandTexture_2: -8495713358252696255
+      SandTexture_20: -6814000097259655609
+      SandTexture_21: 6369535012959498651
+      SandTexture_22: 9172792666581164527
+      SandTexture_23: -8790767492907981282
+      SandTexture_24: -2727449970367386587
+      SandTexture_25: 6003884090316712585
+      SandTexture_26: -2760642427881567612
+      SandTexture_27: 7326454895837550688
+      SandTexture_28: 9123240385250219861
+      SandTexture_29: 5547385639819764018
+      SandTexture_3: -1009971106911601161
+      SandTexture_30: 3522579472059705085
+      SandTexture_31: 1490084583755698306
+      SandTexture_32: 7635567194220134757
+      SandTexture_33: -801209058165330540
+      SandTexture_34: -2177308627399325948
+      SandTexture_35: -6155285203362487481
+      SandTexture_36: 774576660237504222
+      SandTexture_37: -5543254957815098396
+      SandTexture_38: -7732018522278098265
+      SandTexture_39: -2129751259812390720
+      SandTexture_4: -6298626765582144690
+      SandTexture_40: -488295359812501917
+      SandTexture_41: 391795194062961994
+      SandTexture_42: -5607280177196281113
+      SandTexture_43: 5122459174084242595
+      SandTexture_44: -424603681502839112
+      SandTexture_45: -1037030851235426226
+      SandTexture_46: -6327718924081966460
+      SandTexture_47: -3593105226689580976
+      SandTexture_48: 4112319516051548479
+      SandTexture_49: 7855779818608025224
+      SandTexture_5: -5122868236120387732
+      SandTexture_50: -6869518504641767325
+      SandTexture_51: 5196731531388761954
+      SandTexture_52: 5074953233113407079
+      SandTexture_53: 3320876965506841565
+      SandTexture_54: -5465554236988370489
+      SandTexture_55: -7164877122278706315
+      SandTexture_56: -2150643395365847770
+      SandTexture_57: 84886139867538797
+      SandTexture_58: -6810159418603746838
+      SandTexture_59: 5406079766539749505
+      SandTexture_6: 4172283340569883247
+      SandTexture_7: 4640125331277369324
+      SandTexture_8: 8347677356908154042
+      SandTexture_9: 4466521707232038859
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

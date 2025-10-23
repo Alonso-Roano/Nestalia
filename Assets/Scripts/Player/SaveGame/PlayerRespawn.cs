@@ -6,7 +6,8 @@ public class PlayerRespawn : MonoBehaviour
 
     void Start()
     {
-        respawnPoint = transform.position;
+        GameData loadedData = DataManager.Instance.LoadGame();
+        respawnPoint = loadedData.checkpointPos;
     }
 
     public void SetCheckpoint(Vector3 newPoint)

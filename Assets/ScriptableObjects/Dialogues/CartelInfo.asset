@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05638a5a9ba09074db7e64fa72a3c000, type: 3}
+  m_Name: CartelInfo
+  m_EditorClassIdentifier: Assembly-CSharp::DialogeRound
+  dialogeTurnList:
+  - <Character>k__BackingField: {fileID: 11400000, guid: fb0a78d9fb7f58345ae87ef8a2bb9b34, type: 2}
+    dialogueLine: "\xA1ATENCI\xD3N, VIAJERO!"
+  - <Character>k__BackingField: {fileID: 11400000, guid: fb0a78d9fb7f58345ae87ef8a2bb9b34, type: 2}
+    dialogueLine: "\xA1ATENCI\xD3N, VIAJERO!"
+  - <Character>k__BackingField: {fileID: 11400000, guid: fb0a78d9fb7f58345ae87ef8a2bb9b34, type: 2}
+    dialogueLine: "El desierto no perdona. Las espinas y el sol te debilitar\xE1n
+      r\xE1pidamente."
+  - <Character>k__BackingField: {fileID: 11400000, guid: fb0a78d9fb7f58345ae87ef8a2bb9b34, type: 2}
+    dialogueLine: "Si te encuentras mal, recuerda que puedes concentrar tu energ\xEDa
+      y sanar tus heridas instant\xE1neamente pulsando R."

@@ -58,22 +58,34 @@ public class PlayerMovement : MonoBehaviour
         abilityUIController = FindAnyObjectByType<AbilityUIController>();
     }
 
-    void Update()
+    private void Update()
     {
+        // El Update solo se encarga de lógica no física, como los contadores de tiempo.
+        // Es muy ligero y eficiente.
         if (Time.timeScale == 0f) return;
 
-        MoveHorizontal();
-        CheckSurroundings();
-
-        // solo corro las funciones si las habilidades están activas
-        if (canUseWallCling) HandleWallCling();
-        if (canUseSlowFall) HandleSlowFall();
-        if (canUseJump) HandleJump();
-        IsFalling();
-
-        // si tengo tiempo de buffer activo, lo voy descontando frame a frame
         if (jumpBufferCounter > 0)
             jumpBufferCounter -= Time.deltaTime;
+        
+        coyoteTimeCounter = isGrounded ? coyoteTime : coyoteTimeCounter - Time.deltaTime;
+    }
+
+    private void FixedUpdate()
+    {
+        // FixedUpdate se usa para toda la lógica de físicas para consistencia.
+        if (Time.timeScale == 0f) return;
+
+        // 1. Revisamos el entorno
+        CheckSurroundings();
+        
+        // 2. Ejecutamos las habilidades
+        MoveHorizontal();
+        if (canUseJump) HandleJump();
+        if (canUseWallCling) HandleWallCling();
+        if (canUseSlowFall) HandleSlowFall();
+
+        // 3. Actualizamos el Animator
+        UpdateAnimator();
     }
 
     // método que viene del sistema de Input para moverme
@@ -114,9 +126,7 @@ public class PlayerMovement : MonoBehaviour
     private void MoveHorizontal()
     {
         const float forceMultiplier = 5000f;
-        rb.AddForce(Vector2.right * horizontalInput * moveForce * forceMultiplier * Time.deltaTime, ForceMode2D.Force);
-
-        animator.SetFloat("Movement", Mathf.Abs(rb.linearVelocity.x));
+        rb.AddForce(Vector2.right * horizontalInput * moveForce * forceMultiplier * Time.fixedDeltaTime, ForceMode2D.Force);
 
         // giro al personaje dependiendo de hacia dónde me muevo
         float originalScaleX = Mathf.Abs(transform.localScale.x);
@@ -129,12 +139,6 @@ public class PlayerMovement : MonoBehaviour
     private void HandleSlowFall()
     {
         bool isCurrentlyPlanning = !isGrounded && !isWallClinging && rb.linearVelocity.y < 0 && isDashing;
-
-        if (animator != null)
-        {
-            animator.SetBool("IsPlanning", isCurrentlyPlanning);
-        }
-
         if (isCurrentlyPlanning)
         {
             float slowFallForce = Mathf.Abs(rb.linearVelocity.y) * rb.mass * -(1 - (slowFallMultiplier * 10));
@@ -233,12 +237,24 @@ public class PlayerMovement : MonoBehaviour
         rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0f);
         rb.AddForce(force * 33, ForceMode2D.Impulse);
     }
-    private void IsFalling()
+    
+    private void UpdateAnimator()
     {
-        if (animator == null) return;
-        bool isFalling = !isGrounded && !isWallClinging && rb.linearVelocity.y < 0 && !isDashing;
-        abilityUIController.SetGlideColor(isFalling || isDashing);
+        animator.SetFloat("Movement", Mathf.Abs(rb.linearVelocity.x));
+        animator.SetBool("IsWallClinging", isWallClinging);
 
+        bool isFalling = !isGrounded && !isWallClinging && rb.linearVelocity.y < 0;
         animator.SetBool("IsFalling", isFalling);
+
+        bool isGliding = !isGrounded && !isWallClinging && rb.linearVelocity.y < 0 && isDashing;
+        animator.SetBool("IsPlanning", isGliding); // "Planning" era tu nombre original, lo mantengo
+
+        // Actualizar UI (si existe)
+        if (abilityUIController != null)
+        {
+            abilityUIController.SetClimbColor(isTouchingWall);
+            abilityUIController.SetDoubleJumpColor(canDoubleJump);
+            abilityUIController.SetGlideColor(isFalling || isDashing);
+        }
     }
 }

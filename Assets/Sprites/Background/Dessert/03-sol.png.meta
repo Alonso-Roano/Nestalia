@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 3b81b5899130e1d4e8f5b81fcc531e5d
+guid: 06664e689599d2b42b9f3a0b931404cf
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4511143248488958738
-    second: 03-sol_0
+      213: 2943155828993958922
+    second: 02-sol_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -40,13 +40,13 @@ TextureImporter:
     filterMode: 0
     aniso: 1
     mipBias: 0
-    wrapU: 1
-    wrapV: 1
-    wrapW: 1
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 0
   alignment: 0
@@ -100,7 +100,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 03-sol_0
+      name: 02-sol_0
       rect:
         serializedVersion: 2
         x: 35
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 21b061922ecca9e30800000000000000
-      internalID: 4511143248488958738
+      spriteID: a042ec902a038d820800000000000000
+      internalID: 2943155828993958922
       vertices: []
       indices: 
       edges: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      03-sol_0: 4511143248488958738
+      02-sol_0: 2943155828993958922
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

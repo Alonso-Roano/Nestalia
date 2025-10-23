@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerState : MonoBehaviour
 {
@@ -26,7 +27,10 @@ public class PlayerState : MonoBehaviour
 
             hasDoubleJump = this.hasDoubleJump,
             hasSlowFall = this.hasSlowFall,
-            hasWallClimb = this.hasWallClimb
+            hasWallClimb = this.hasWallClimb,
+
+            lastScene = SceneManager.GetActiveScene().buildIndex
+
         };
 
         DataManager.Instance.SaveGame(data);

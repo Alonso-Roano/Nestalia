@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05638a5a9ba09074db7e64fa72a3c000, type: 3}
+  m_Name: DangerBettle
+  m_EditorClassIdentifier: Assembly-CSharp::DialogeRound
+  dialogeTurnList:
+  - <Character>k__BackingField: {fileID: 11400000, guid: bde7a36d04b4ffb49aefc1a82094e81f, type: 2}
+    dialogueLine: "\xA1Ah! \xBFQue es esa cosa?"
+  - <Character>k__BackingField: {fileID: 11400000, guid: fcef7316d43e9444ebae0b16d6a799c2, type: 2}
+    dialogueLine: "\xBFEs un insecto? \xA1Que asco!"
+  - <Character>k__BackingField: {fileID: 11400000, guid: 483471fc764eed54c81f7c30b99b84c6, type: 2}
+    dialogueLine: Tranquilo,  si pulso K para atacar todo estara bien.

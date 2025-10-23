@@ -8,6 +8,7 @@ TagManager:
   - Ground
   - FarBackground
   - PlayerHitbox
+  - EnemyStatic
   layers:
   - Default
   - TransparentFX

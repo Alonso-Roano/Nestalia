@@ -807,8 +807,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: + 3 <3
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: 79459efec17a4d00a321bdcc27bbc385, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b38f2490f0b1b5048945de224db8a357, type: 2}
+  m_sharedMaterial: {fileID: -6876001927797777135, guid: b38f2490f0b1b5048945de224db8a357, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -842,11 +842,11 @@ MonoBehaviour:
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
-  m_characterSpacing: 0
-  m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_characterSpacing: 5
+  m_wordSpacing: 50
+  m_lineSpacing: 1
   m_lineSpacingMax: 0
-  m_paragraphSpacing: 0
+  m_paragraphSpacing: 10
   m_charWidthMaxAdj: 0
   m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
@@ -1499,6 +1499,34 @@ MonoBehaviour:
   indexDisplayTime: 1.5
   indexDisplayCanvasGroup: {fileID: 659683618409565297}
   indexFadeOutDuration: 0.5
+  animator: {fileID: 0}
+  backgroundImages:
+  - {fileID: 5560403320537664419, guid: 55bceb6e47a4730489e660c5ffe85154, type: 3}
+  - {fileID: 1787513379, guid: 55bceb6e47a4730489e660c5ffe85154, type: 3}
+  - {fileID: -5769943833962801094, guid: 55bceb6e47a4730489e660c5ffe85154, type: 3}
+  - {fileID: 5741143402310809189, guid: 55bceb6e47a4730489e660c5ffe85154, type: 3}
+  - {fileID: 5759527504585968705, guid: 55bceb6e47a4730489e660c5ffe85154, type: 3}
+  - {fileID: -7518122817814454854, guid: 55bceb6e47a4730489e660c5ffe85154, type: 3}
+  - {fileID: -1777700380465770113, guid: 55bceb6e47a4730489e660c5ffe85154, type: 3}
+  - {fileID: 4364699071801196366, guid: 55bceb6e47a4730489e660c5ffe85154, type: 3}
+  - {fileID: -5401334221986575266, guid: 55bceb6e47a4730489e660c5ffe85154, type: 3}
+  - {fileID: 347904302668798301, guid: 55bceb6e47a4730489e660c5ffe85154, type: 3}
+  - {fileID: 9191737500441068414, guid: 55bceb6e47a4730489e660c5ffe85154, type: 3}
+  - {fileID: -2030353180474961362, guid: 55bceb6e47a4730489e660c5ffe85154, type: 3}
+  - {fileID: -3723830307603579369, guid: 55bceb6e47a4730489e660c5ffe85154, type: 3}
+  - {fileID: 614185096, guid: 55bceb6e47a4730489e660c5ffe85154, type: 3}
+  - {fileID: -111647396, guid: 55bceb6e47a4730489e660c5ffe85154, type: 3}
+  - {fileID: -1047544943934930643, guid: 55bceb6e47a4730489e660c5ffe85154, type: 3}
+  - {fileID: -2054415231662136404, guid: 55bceb6e47a4730489e660c5ffe85154, type: 3}
+  - {fileID: -6037624684864323581, guid: 55bceb6e47a4730489e660c5ffe85154, type: 3}
+  - {fileID: 8635509369764243348, guid: 55bceb6e47a4730489e660c5ffe85154, type: 3}
+  - {fileID: 5164578819256496722, guid: 55bceb6e47a4730489e660c5ffe85154, type: 3}
+  - {fileID: -2206367739499450559, guid: 55bceb6e47a4730489e660c5ffe85154, type: 3}
+  - {fileID: -2383983994789813102, guid: 55bceb6e47a4730489e660c5ffe85154, type: 3}
+  - {fileID: -7844834712688824443, guid: 55bceb6e47a4730489e660c5ffe85154, type: 3}
+  - {fileID: -2399761003345718156, guid: 55bceb6e47a4730489e660c5ffe85154, type: 3}
+  backgroundImageComponent: {fileID: 0}
+  backgroundDisplayTime: 0.5
 --- !u!114 &9022349340000649790
 MonoBehaviour:
   m_ObjectHideFlags: 0

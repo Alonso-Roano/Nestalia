@@ -17,6 +17,7 @@ public class GameData
 
     // === VIDA ===
     public int maxHealth;
+    public int currentHealth;
 
     // === HABILIDADES ===
     // toggles para habilidades desbloqueadas
@@ -30,16 +31,17 @@ public class GameData
     public int hitsTaken;          // cuántos golpes recibió el player
     public int deaths;             // número de veces que murió
     public int collectedItems;     // objetos recolectados
-    public string lastSceneName;   // última escena cargada
+    public int lastScene;   // última escena cargada
 
     // === CONSTRUCTOR POR DEFECTO ===
     public GameData()
     {
         currentLevel = 1;
         currentSubLevel = 1;
-        checkpointPos = Vector3.zero;
+        checkpointPos = new Vector3(480f, 500f, 0f);
 
         maxHealth = 100;
+        currentHealth = 10;
 
         hasDoubleJump = false;
         hasSlowFall = false;
@@ -50,6 +52,6 @@ public class GameData
         hitsTaken = 0;
         deaths = 0;
         collectedItems = 0;
-        lastSceneName = "Nivel1";
+        lastScene = 1;
     }
 }

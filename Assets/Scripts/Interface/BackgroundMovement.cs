@@ -3,7 +3,7 @@ using UnityEngine;
 public class BackgroundMovement : MonoBehaviour
 {
     [SerializeField] private Vector2 velocidadMovimiento;
-    private Vector2 offset;
+    
     private Material material;
     private Rigidbody2D jugadorRB;
 
@@ -15,7 +15,9 @@ public class BackgroundMovement : MonoBehaviour
 
     void Update()
     {
-        offset = jugadorRB.linearVelocityX * 0.00001f * velocidadMovimiento;
+        Vector2 offset = (jugadorRB.linearVelocity.x * velocidadMovimiento) * Time.deltaTime * 0.0001f;
+
+        // Aplicamos el desplazamiento a la textura del material.
         material.mainTextureOffset += offset;
     }
 }
