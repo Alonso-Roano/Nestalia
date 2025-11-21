@@ -1,0 +1,1079 @@
+fileFormatVersion: 2
+guid: 039299d3717c0d442921ac538c2d8424
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6395854833610044660
+    second: IceAssets_0
+  - first:
+      213: -4979711074371308480
+    second: IceAssets_1
+  - first:
+      213: 6885418117930008719
+    second: IceAssets_2
+  - first:
+      213: 4897906178632149965
+    second: IceAssets_3
+  - first:
+      213: -4019742730896023955
+    second: IceAssets_4
+  - first:
+      213: 5504370302888633284
+    second: IceAssets_5
+  - first:
+      213: 7780195223478812838
+    second: IceAssets_6
+  - first:
+      213: 8233854461139570229
+    second: IceAssets_7
+  - first:
+      213: -7152541311557526904
+    second: IceAssets_8
+  - first:
+      213: -3236668337069996378
+    second: IceAssets_9
+  - first:
+      213: 3141898948850326315
+    second: IceAssets_10
+  - first:
+      213: 5891675128020051871
+    second: IceAssets_11
+  - first:
+      213: -1642783222225466115
+    second: IceAssets_12
+  - first:
+      213: -1211636263340744203
+    second: IceAssets_13
+  - first:
+      213: 6524208124642270598
+    second: IceAssets_14
+  - first:
+      213: -3260916127217432893
+    second: IceAssets_15
+  - first:
+      213: 2284902333493448461
+    second: IceAssets_16
+  - first:
+      213: 2911735205682103485
+    second: IceAssets_17
+  - first:
+      213: 1492217326169841361
+    second: IceAssets_18
+  - first:
+      213: -7474209887027775986
+    second: IceAssets_19
+  - first:
+      213: 690155474949110143
+    second: IceAssets_20
+  - first:
+      213: -3556721571762780461
+    second: IceAssets_21
+  - first:
+      213: -1589995428036771319
+    second: IceAssets_22
+  - first:
+      213: 4068598624213356496
+    second: IceAssets_23
+  - first:
+      213: 2232442629439680254
+    second: IceAssets_24
+  - first:
+      213: -8673513357492156002
+    second: IceAssets_25
+  - first:
+      213: -3889211723167826568
+    second: IceAssets_26
+  - first:
+      213: 4628047224273041263
+    second: IceAssets_27
+  - first:
+      213: 4094996040358027135
+    second: IceAssets_28
+  - first:
+      213: 6387152622664131324
+    second: IceAssets_29
+  - first:
+      213: -5142395692510732968
+    second: IceAssets_30
+  - first:
+      213: -8196710733908856096
+    second: IceAssets_31
+  - first:
+      213: -7804996727746106639
+    second: IceAssets_32
+  - first:
+      213: 6414317402486211438
+    second: IceAssets_33
+  - first:
+      213: 8837596582659151005
+    second: IceAssets_34
+  - first:
+      213: 9176075370840408597
+    second: IceAssets_35
+  - first:
+      213: 3098126924567865459
+    second: IceAssets_36
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 2
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: IceAssets_0
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 828
+        width: 78
+        height: 149
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f4ba40a514a2c850800000000000000
+      internalID: 6395854833610044660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IceAssets_1
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 839
+        width: 92
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 044f408592384eab0800000000000000
+      internalID: -4979711074371308480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IceAssets_2
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 839
+        width: 137
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f80c1493c4bed8f50800000000000000
+      internalID: 6885418117930008719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IceAssets_3
+      rect:
+        serializedVersion: 2
+        x: 689
+        y: 846
+        width: 110
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dcb6f8028bbd8f340800000000000000
+      internalID: 4897906178632149965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IceAssets_4
+      rect:
+        serializedVersion: 2
+        x: 835
+        y: 853
+        width: 110
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6edb74a8410738c0800000000000000
+      internalID: -4019742730896023955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IceAssets_5
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 692
+        width: 75
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c3e2e780a3736c40800000000000000
+      internalID: 5504370302888633284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IceAssets_6
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 696
+        width: 89
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a045a2a55ec8fb60800000000000000
+      internalID: 7780195223478812838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IceAssets_7
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 692
+        width: 124
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53e4d70f107844270800000000000000
+      internalID: 8233854461139570229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IceAssets_8
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 692
+        width: 99
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88a9e4ba2911dbc90800000000000000
+      internalID: -7152541311557526904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IceAssets_9
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 689
+        width: 124
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a64039cb4b0513d0800000000000000
+      internalID: -3236668337069996378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IceAssets_10
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 689
+        width: 110
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2b956e82744a9b20800000000000000
+      internalID: 3141898948850326315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IceAssets_11
+      rect:
+        serializedVersion: 2
+        x: 835
+        y: 689
+        width: 117
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f97a3a1405f63c150800000000000000
+      internalID: 5891675128020051871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IceAssets_12
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 553
+        width: 138
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dfc874cfc59a339e0800000000000000
+      internalID: -1642783222225466115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IceAssets_13
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 556
+        width: 110
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f1e79eec376f2fe0800000000000000
+      internalID: -1211636263340744203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IceAssets_14
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 553
+        width: 106
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68d150ef8b4aa8a50800000000000000
+      internalID: 6524208124642270598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IceAssets_15
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 553
+        width: 124
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c6ccd23f06eeb2d0800000000000000
+      internalID: -3260916127217432893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IceAssets_16
+      rect:
+        serializedVersion: 2
+        x: 609
+        y: 616
+        width: 54
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0f865ef09a95bf10800000000000000
+      internalID: 2284902333493448461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IceAssets_17
+      rect:
+        serializedVersion: 2
+        x: 692
+        y: 553
+        width: 110
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db44ea61ebf886820800000000000000
+      internalID: 2911735205682103485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IceAssets_18
+      rect:
+        serializedVersion: 2
+        x: 828
+        y: 553
+        width: 114
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1de590680cb65b410800000000000000
+      internalID: 1492217326169841361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IceAssets_19
+      rect:
+        serializedVersion: 2
+        x: 581
+        y: 553
+        width: 82
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e063ff235b5464890800000000000000
+      internalID: -7474209887027775986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IceAssets_20
+      rect:
+        serializedVersion: 2
+        x: 908
+        y: 532
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f79f1247fbce39900800000000000000
+      internalID: 690155474949110143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IceAssets_21
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 389
+        width: 114
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d64c16239cf3aec0800000000000000
+      internalID: -3556721571762780461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IceAssets_22
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 389
+        width: 110
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9028f5515933fe9e0800000000000000
+      internalID: -1589995428036771319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IceAssets_23
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 389
+        width: 120
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0df41e174e0967830800000000000000
+      internalID: 4068598624213356496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IceAssets_24
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 389
+        width: 110
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: efee0355eba3bfe10800000000000000
+      internalID: 2232442629439680254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IceAssets_25
+      rect:
+        serializedVersion: 2
+        x: 567
+        y: 389
+        width: 110
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e99031c3e8d71a780800000000000000
+      internalID: -8673513357492156002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IceAssets_26
+      rect:
+        serializedVersion: 2
+        x: 703
+        y: 389
+        width: 110
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87dfb403b8eb60ac0800000000000000
+      internalID: -3889211723167826568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IceAssets_27
+      rect:
+        serializedVersion: 2
+        x: 835
+        y: 389
+        width: 135
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f67f6861e602a3040800000000000000
+      internalID: 4628047224273041263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IceAssets_28
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 235
+        width: 110
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7fdb26d33954d830800000000000000
+      internalID: 4094996040358027135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IceAssets_29
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 231
+        width: 194
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf2a9104879b3a850800000000000000
+      internalID: 6387152622664131324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IceAssets_30
+      rect:
+        serializedVersion: 2
+        x: 567
+        y: 245
+        width: 114
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85d166dfc5a82a8b0800000000000000
+      internalID: -5142395692510732968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IceAssets_31
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 240
+        width: 142
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e23bbaf30f6f3e80800000000000000
+      internalID: -8196710733908856096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IceAssets_32
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 210
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fa6b9924d41fa390800000000000000
+      internalID: -7804996727746106639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IceAssets_33
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 80
+        width: 71
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e630ccb61bb340950800000000000000
+      internalID: 6414317402486211438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IceAssets_34
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 80
+        width: 79
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d94da91b44375aa70800000000000000
+      internalID: 8837596582659151005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IceAssets_35
+      rect:
+        serializedVersion: 2
+        x: 566
+        y: 87
+        width: 110
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 512472fcee7f75f70800000000000000
+      internalID: 9176075370840408597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IceAssets_36
+      rect:
+        serializedVersion: 2
+        x: 796
+        y: 94
+        width: 145
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 378e0f7f502cefa20800000000000000
+      internalID: 3098126924567865459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      IceAssets_0: 6395854833610044660
+      IceAssets_1: -4979711074371308480
+      IceAssets_10: 3141898948850326315
+      IceAssets_11: 5891675128020051871
+      IceAssets_12: -1642783222225466115
+      IceAssets_13: -1211636263340744203
+      IceAssets_14: 6524208124642270598
+      IceAssets_15: -3260916127217432893
+      IceAssets_16: 2284902333493448461
+      IceAssets_17: 2911735205682103485
+      IceAssets_18: 1492217326169841361
+      IceAssets_19: -7474209887027775986
+      IceAssets_2: 6885418117930008719
+      IceAssets_20: 690155474949110143
+      IceAssets_21: -3556721571762780461
+      IceAssets_22: -1589995428036771319
+      IceAssets_23: 4068598624213356496
+      IceAssets_24: 2232442629439680254
+      IceAssets_25: -8673513357492156002
+      IceAssets_26: -3889211723167826568
+      IceAssets_27: 4628047224273041263
+      IceAssets_28: 4094996040358027135
+      IceAssets_29: 6387152622664131324
+      IceAssets_3: 4897906178632149965
+      IceAssets_30: -5142395692510732968
+      IceAssets_31: -8196710733908856096
+      IceAssets_32: -7804996727746106639
+      IceAssets_33: 6414317402486211438
+      IceAssets_34: 8837596582659151005
+      IceAssets_35: 9176075370840408597
+      IceAssets_36: 3098126924567865459
+      IceAssets_4: -4019742730896023955
+      IceAssets_5: 5504370302888633284
+      IceAssets_6: 7780195223478812838
+      IceAssets_7: 8233854461139570229
+      IceAssets_8: -7152541311557526904
+      IceAssets_9: -3236668337069996378
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

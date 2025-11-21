@@ -34,6 +34,7 @@ public class PlayerState : MonoBehaviour
         };
 
         DataManager.Instance.SaveGame(data);
+        PlayerStatsManager.Instance.SaveStats();
         Debug.Log("Datos del jugador guardados.");
     }
 

@@ -6,42 +6,33 @@ using System.Collections;
 public class PlayerAttack : MonoBehaviour
 {
     [Header("Configuración de Ataque")]
-    [Tooltip("El objeto hijo que funciona como hitbox de ataque.")]
     [SerializeField] private GameObject attackHitboxObject;
-    [Tooltip("La hitbox del jugador que recibe daño. Se desactivará durante el ataque para dar invulnerabilidad.")]
-    [SerializeField] private GameObject playerHurtbox; // <-- CAMPO AÑADIDO
-    [Tooltip("El daño que inflige cada ataque.")]
+    [SerializeField] private GameObject playerHurtbox;
     public int attackDamage = 1;
-    [Tooltip("Cuánto tiempo (en segundos) permanece activa la hitbox.")]
     [SerializeField] private float attackDuration = 0.2f;
-    [Tooltip("Distancia a la que se desplaza la hitbox desde el centro del jugador.")]
     [SerializeField] private Vector2 hitboxOffset = new Vector2(0.7f, 0.7f);
 
-    [Header("Ataque Pogo (Hacia Abajo)")]
-    [Tooltip("La fuerza de retroceso/salto al atacar hacia abajo y golpear a un enemigo.")]
-    [SerializeField] public float pogoForce = 10f;
+    [Header("Configuración Visual")]
+    [SerializeField] private GameObject attackIndicatorObject;
 
-    [Header("Mapeo de Inputs")]
-    [Tooltip("Referencia a la acción de Ataque del Input Actions asset.")]
-    [SerializeField] private InputActionReference attackActionReference;
-    [Tooltip("Referencia a la acción de Movimiento (WASD) del Input Actions asset.")]
-    [SerializeField] private InputActionReference moveActionReference;
+    [Header("Ataque Pogo (Hacia Abajo)")]
+    public float pogoForce = 10f;
+
+    [Header("Mapeo de Inputs (Unit Events)")]
+    [Tooltip("PlayerInput que dispara eventos por acción.")]
+    [SerializeField] private PlayerInput playerInput;
 
     public Animator animator;
 
-    // Componentes y variables internas
     private Rigidbody2D rb;
     private AttackHitbox attackHitboxScript;
-    private InputAction attackAction;
-    private InputAction moveAction;
-    private Vector2 lastMoveDirection = Vector2.right;
+
     private bool isAttacking = false;
+    private Vector2 lastMoveDirection = Vector2.right;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        attackAction = attackActionReference.action;
-        moveAction = moveActionReference.action;
 
         if (attackHitboxObject != null)
         {
@@ -49,43 +40,26 @@ public class PlayerAttack : MonoBehaviour
             attackHitboxScript.damage = attackDamage;
             attackHitboxObject.SetActive(false);
         }
-        else
-        {
-            Debug.LogError("No se ha asignado un objeto para la AttackHitbox en el inspector.");
-        }
 
-        // Aseguramos que la hurtbox del jugador esté activa al empezar
-        if (playerHurtbox != null)
-        {
-            playerHurtbox.SetActive(true);
-        }
-    }
-
-    private void OnEnable()
-    {
-        attackAction.Enable();
-        moveAction.Enable();
-        attackAction.performed += OnAttack;
-    }
-
-    private void OnDisable()
-    {
-        attackAction.Disable();
-        moveAction.Disable();
-        attackAction.performed -= OnAttack;
+        if (attackIndicatorObject) attackIndicatorObject.SetActive(false);
+        if (playerHurtbox) playerHurtbox.SetActive(true);
     }
 
     private void Update()
     {
-        Vector2 moveInput = moveAction.ReadValue<Vector2>();
+        // El movimiento se lee directamente del PlayerInput
+        Vector2 moveInput = playerInput.actions["Move"].ReadValue<Vector2>();
+
         if (moveInput.sqrMagnitude > 0.1f)
         {
             lastMoveDirection = moveInput;
         }
     }
 
-    private void OnAttack(InputAction.CallbackContext context)
+    // --- NUEVO: Método llamado por Unity Event del PlayerInput ---
+    public void OnAttackEvent(InputAction.CallbackContext ctx)
     {
+        if (!ctx.performed) return;
         if (isAttacking) return;
 
         Vector2 attackDirection;
@@ -114,27 +88,39 @@ public class PlayerAttack : MonoBehaviour
         StartCoroutine(AttackCoroutine(attackDirection));
     }
 
-
     private IEnumerator AttackCoroutine(Vector2 direction)
     {
         isAttacking = true;
 
-        // --- CAMBIO AÑADIDO: Desactivar la hurtbox del jugador ---
         if (playerHurtbox != null)
-        {
             playerHurtbox.SetActive(false);
-        }
-        // ---------------------------------------------------------
 
-        attackHitboxObject.transform.localPosition = new Vector2(
+        Vector2 newPosition = new Vector2(
             direction.x * hitboxOffset.x,
             direction.y * hitboxOffset.y
         );
+
+        attackHitboxObject.transform.localPosition = newPosition;
+
+        if (attackIndicatorObject != null)
+        {
+            attackIndicatorObject.transform.localPosition = newPosition;
+
+            float angle = direction == Vector2.left ? 180f :
+                          direction == Vector2.up ? 90f :
+                          direction == Vector2.down ? -90f : 0f;
+
+            attackIndicatorObject.transform.localRotation =
+                Quaternion.Euler(0, 0, angle);
+
+            attackIndicatorObject.SetActive(true);
+        }
 
         attackHitboxObject.SetActive(true);
 
         yield return new WaitForSeconds(attackDuration);
 
+        // --- POGO ---
         if (direction == Vector2.down && attackHitboxScript.enemyHit)
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0);
@@ -142,13 +128,9 @@ public class PlayerAttack : MonoBehaviour
         }
 
         attackHitboxObject.SetActive(false);
+        if (attackIndicatorObject) attackIndicatorObject.SetActive(false);
 
-        // --- CAMBIO AÑADIDO: Reactivar la hurtbox del jugador ---
-        if (playerHurtbox != null)
-        {
-            playerHurtbox.SetActive(true);
-        }
-        // -------------------------------------------------------
+        if (playerHurtbox) playerHurtbox.SetActive(true);
 
         isAttacking = false;
     }

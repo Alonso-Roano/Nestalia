@@ -26,12 +26,15 @@ public class EnemyMovement : MonoBehaviour
         CheckForObstaclesAndJump();
     }
 
-    // Método principal para que la IA ordene moverse
     public void Move(Vector2 direction, float speedMultiplier = 1f)
     {
+        if (rb.IsSleeping())
+        {
+            rb.WakeUp();
+        }
+
         rb.AddForce(new Vector2(direction.x * moveSpeed * speedMultiplier, 0f), ForceMode2D.Force);
 
-        // Determinar la dirección a la que mirar
         if (Mathf.Abs(direction.x) > 0.01f)
         {
             int newDirection = (int)Mathf.Sign(direction.x);
@@ -45,15 +48,6 @@ public class EnemyMovement : MonoBehaviour
     public void Stop()
     {
         rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
-    }
-
-    public void ApplyKnockback(Vector2 direction, float force, float upForce)
-    {
-        // Detener cualquier movimiento actual para que el knockback sea efectivo
-        rb.linearVelocity = Vector2.zero;
-        
-        Vector2 forceVector = new Vector2(direction.x * force, upForce);
-        rb.AddForce(forceVector, ForceMode2D.Impulse);
     }
     
     private void Flip(int newDirection)

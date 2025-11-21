@@ -1,6 +1,6 @@
 using UnityEngine;
 using UnityEngine.Tilemaps;
-using System.Collections; // Necesario para Coroutines
+using System.Collections;
 
 public class TilemapFadeController : MonoBehaviour
 {

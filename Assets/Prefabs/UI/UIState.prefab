@@ -1502,7 +1502,7 @@ MonoBehaviour:
   animator: {fileID: 0}
   backgroundImages:
   - {fileID: 5560403320537664419, guid: 55bceb6e47a4730489e660c5ffe85154, type: 3}
-  - {fileID: 1787513379, guid: 55bceb6e47a4730489e660c5ffe85154, type: 3}
+  - {fileID: -282173105, guid: 55bceb6e47a4730489e660c5ffe85154, type: 3}
   - {fileID: -5769943833962801094, guid: 55bceb6e47a4730489e660c5ffe85154, type: 3}
   - {fileID: 5741143402310809189, guid: 55bceb6e47a4730489e660c5ffe85154, type: 3}
   - {fileID: 5759527504585968705, guid: 55bceb6e47a4730489e660c5ffe85154, type: 3}
@@ -1514,8 +1514,6 @@ MonoBehaviour:
   - {fileID: 9191737500441068414, guid: 55bceb6e47a4730489e660c5ffe85154, type: 3}
   - {fileID: -2030353180474961362, guid: 55bceb6e47a4730489e660c5ffe85154, type: 3}
   - {fileID: -3723830307603579369, guid: 55bceb6e47a4730489e660c5ffe85154, type: 3}
-  - {fileID: 614185096, guid: 55bceb6e47a4730489e660c5ffe85154, type: 3}
-  - {fileID: -111647396, guid: 55bceb6e47a4730489e660c5ffe85154, type: 3}
   - {fileID: -1047544943934930643, guid: 55bceb6e47a4730489e660c5ffe85154, type: 3}
   - {fileID: -2054415231662136404, guid: 55bceb6e47a4730489e660c5ffe85154, type: 3}
   - {fileID: -6037624684864323581, guid: 55bceb6e47a4730489e660c5ffe85154, type: 3}
@@ -1525,6 +1523,9 @@ MonoBehaviour:
   - {fileID: -2383983994789813102, guid: 55bceb6e47a4730489e660c5ffe85154, type: 3}
   - {fileID: -7844834712688824443, guid: 55bceb6e47a4730489e660c5ffe85154, type: 3}
   - {fileID: -2399761003345718156, guid: 55bceb6e47a4730489e660c5ffe85154, type: 3}
+  - {fileID: -189241979768682712, guid: 55bceb6e47a4730489e660c5ffe85154, type: 3}
+  - {fileID: 2058081575, guid: 55bceb6e47a4730489e660c5ffe85154, type: 3}
+  - {fileID: 2115230466, guid: 55bceb6e47a4730489e660c5ffe85154, type: 3}
   backgroundImageComponent: {fileID: 0}
   backgroundDisplayTime: 0.5
 --- !u!114 &9022349340000649790
@@ -1616,6 +1617,26 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 04c0a0d9-24e6-4a53-8fe0-d6a366704c97
     m_ActionName: 'Player/MenuRigth[/Keyboard/l]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 46caaeac-f154-48d3-80f2-8fd024510687
+    m_ActionName: 'Player/Talk[/Keyboard/e]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 79d64f51-6d09-42ba-801b-bb926420612f
+    m_ActionName: 'Player/Next[/Keyboard/enter,/Keyboard/space]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: b434bfc4-b1a6-4a15-950e-4e20111f4aa3
+    m_ActionName: 'Player/Health[/Keyboard/r]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: be7be2be-2c27-45f7-8f7d-2c34f93f841b
+    m_ActionName: 'Player/Menu[/Keyboard/q]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 1bb78be6-5e74-42b7-aea6-05e9a6a736b5
+    m_ActionName: 'Player/RatonScroll[/Mouse/scroll]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player

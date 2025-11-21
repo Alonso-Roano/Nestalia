@@ -9,6 +9,10 @@ TagManager:
   - FarBackground
   - PlayerHitbox
   - EnemyStatic
+  - PlayerAtatck
+  - Warning
+  - Undefined
+  - Arrow
   layers:
   - Default
   - TransparentFX
@@ -18,10 +22,10 @@ TagManager:
   - UI
   - Wall
   - BackGround
-  - 
-  - 
-  - 
-  - 
+  - Arrow
+  - Player
+  - Enemy
+  - Plataforma
   - 
   - 
   - 

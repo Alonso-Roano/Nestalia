@@ -35,6 +35,7 @@ public class DataManager : MonoBehaviour
             string json = File.ReadAllText(savePath);
             GameData data = JsonUtility.FromJson<GameData>(json);
             Debug.Log("Juego cargado correctamente.");
+            Debug.Log(data);
             return data;
         }
         else
@@ -53,6 +54,10 @@ public class DataManager : MonoBehaviour
         else
         {
             Debug.LogWarning("No hay datos de juego para eliminar.");
+        }
+        if (PlayerStatsManager.Instance != null)
+        {
+            PlayerStatsManager.Instance.ResetStats();
         }
     }
 }

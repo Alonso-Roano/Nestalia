@@ -141,6 +141,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WorldItem
   idItem: 0
-  hoverSpeed: 10
-  hoverHeight: 5
-  pickupEffectPrefab: {fileID: 2253445958295186663, guid: 8f79676eee2d008448bcb491753ffeb6, type: 3}
+  hoverSpeed: 7
+  hoverHeight: 10
+  pickupEffectPrefab: {fileID: 3025974097412445557, guid: bc23165638910ba4e89bf5d1d63d5133, type: 3}

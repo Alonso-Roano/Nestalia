@@ -2,8 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class DialogManager : MonoBehaviour
 {
@@ -11,43 +11,29 @@ public class DialogManager : MonoBehaviour
     public static bool isDialogueActive { get; private set; }
 
     private Queue<DialogeTurn> dialogTurnQueue;
-    
-    [SerializeField] private InputActionReference nextDialogueActionReference;
-    private InputAction nextDialogueAction;
+
     [SerializeField] private float typingSpeed = 0.03f;
+
+    // Flag que se activa por UnityEvent
+    private bool nextPressed = false;
 
     private void Awake()
     {
         instance = this;
         showDialogBox(false);
         isDialogueActive = false;
-
-        if (nextDialogueActionReference != null)
-        {
-            nextDialogueAction = nextDialogueActionReference.action;
-        }
     }
 
-    private void OnEnable()
+    // Este método LO LLAMA UnityEvents desde el Input System
+    public void OnNextDialogue(InputAction.CallbackContext ctx)
     {
-        if (nextDialogueAction != null)
-        {
-            nextDialogueAction.Enable();
-        }
-    }
-
-    private void OnDisable()
-    {
-        if (nextDialogueAction != null)
-        {
-            nextDialogueAction.Disable();
-        }
+        nextPressed = true;
     }
 
     public void startDialogue(DialogeRound dialoge)
     {
         if (isDialogueActive) return;
-        
+
         dialogTurnQueue = new Queue<DialogeTurn>(dialoge.DialogeTurnList);
         StartCoroutine(DialogueCoroutine());
     }
@@ -60,15 +46,17 @@ public class DialogManager : MonoBehaviour
 
         while (dialogTurnQueue.Count > 0)
         {
+            nextPressed = false;
+
             var currentTurn = dialogTurnQueue.Dequeue();
             setCharacterInfo(currentTurn.Character);
-            
+
             yield return StartCoroutine(TypeLine(currentTurn.DialogueLine));
 
-            yield return new WaitUntil(() => nextDialogueAction.triggered);
-            yield return null;
+            // Espera a que UnityEvent dispare OnNextDialogue()
+            yield return new WaitUntil(() => nextPressed);
         }
-        
+
         showDialogBox(false);
         Time.timeScale = 1f;
         isDialogueActive = false;
@@ -77,17 +65,17 @@ public class DialogManager : MonoBehaviour
     private IEnumerator TypeLine(string line)
     {
         ClearDialogArea();
-        
+
         foreach (char c in line.ToCharArray())
         {
             DialogArea.text += c;
-            
-            if (nextDialogueAction.triggered)
+
+            if (nextPressed)
             {
                 DialogArea.text = line;
                 break;
             }
-            
+
             yield return new WaitForSecondsRealtime(typingSpeed);
         }
     }

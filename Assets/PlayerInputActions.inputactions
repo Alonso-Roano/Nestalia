@@ -104,6 +104,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "RatonScroll",
+                    "type": "Value",
+                    "id": "1bb78be6-5e74-42b7-aea6-05e9a6a736b5",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
@@ -252,8 +261,30 @@
                 },
                 {
                     "name": "",
+                    "id": "84e5f385-93b6-41e2-bf61-3405a80ff4e5",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Attack",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "4d922876-cf9c-45e1-bd1a-eff68aa1cc91",
                     "path": "<Keyboard>/i",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Select",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2b48e154-f5ad-4672-9fc8-6a14bd27f5d7",
+                    "path": "<Mouse>/middleButton",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -274,8 +305,41 @@
                 },
                 {
                     "name": "",
+                    "id": "40550b3f-37b3-4364-a281-764eaef34676",
+                    "path": "<Mouse>/{Forward}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MenuLeft",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0d7e1d53-62de-4f34-b242-ae7db5cefda4",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MenuLeft",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "452092ac-8061-433b-94ab-5d88b57768f7",
                     "path": "<Keyboard>/l",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MenuRigth",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f60d5642-fbad-4ad5-b2b8-34745598f861",
+                    "path": "<Mouse>/{Back}",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -335,6 +399,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "Menu",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "639bb335-064b-431e-96a4-ac3ced02fca2",
+                    "path": "<Mouse>/scroll",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "RatonScroll",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

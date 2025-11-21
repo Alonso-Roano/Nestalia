@@ -1,0 +1,793 @@
+fileFormatVersion: 2
+guid: 390e6389a77bacc40b38da2816820ad5
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 935418818315367237
+    second: Aves_0
+  - first:
+      213: -5356342919058939882
+    second: Aves_1
+  - first:
+      213: 3878367175819962904
+    second: Aves_2
+  - first:
+      213: -6856268979468909740
+    second: Aves_3
+  - first:
+      213: -6192938590807084286
+    second: Aves_4
+  - first:
+      213: 176299989942675164
+    second: Aves_5
+  - first:
+      213: 8219386457808491160
+    second: Aves_6
+  - first:
+      213: -8661409882853081555
+    second: Aves_7
+  - first:
+      213: 8456461148463743406
+    second: Aves_8
+  - first:
+      213: -1200671667463409994
+    second: Aves_9
+  - first:
+      213: 1871534002627501765
+    second: Aves_10
+  - first:
+      213: -5704206257967181431
+    second: Aves_11
+  - first:
+      213: 6363587030031920686
+    second: Aves_12
+  - first:
+      213: 6418287056129176689
+    second: Aves_13
+  - first:
+      213: 4652533902521735222
+    second: Aves_14
+  - first:
+      213: 1343755497342397414
+    second: Aves_15
+  - first:
+      213: 113853187900254591
+    second: Aves_16
+  - first:
+      213: 5494954796926060898
+    second: Aves_17
+  - first:
+      213: 1421953056040282791
+    second: Aves_18
+  - first:
+      213: -4450436387807802622
+    second: Aves_19
+  - first:
+      213: 4926238360553573248
+    second: Aves_20
+  - first:
+      213: -3362742605639670291
+    second: Aves_21
+  - first:
+      213: 1506172502546821894
+    second: Aves_22
+  - first:
+      213: 2353229493936641228
+    second: Aves_23
+  - first:
+      213: -6343890047236709781
+    second: Aves_24
+  - first:
+      213: -2413145822341251358
+    second: Aves_25
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 2
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Aves_0
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 580
+        width: 219
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54337ed85764bfc00800000000000000
+      internalID: 935418818315367237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aves_1
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 707
+        width: 97
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61020568e727aa5b0800000000000000
+      internalID: -5356342919058939882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aves_2
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 707
+        width: 79
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81aa84fd56ab2d530800000000000000
+      internalID: 3878367175819962904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aves_3
+      rect:
+        serializedVersion: 2
+        x: 509
+        y: 691
+        width: 107
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 453c93270b3a9d0a0800000000000000
+      internalID: -6856268979468909740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aves_4
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 666
+        width: 131
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 203b22bc9234e0aa0800000000000000
+      internalID: -6192938590807084286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aves_5
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 564
+        width: 151
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd6207228e7527200800000000000000
+      internalID: 176299989942675164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aves_6
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 624
+        width: 80
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 892d4596f60211270800000000000000
+      internalID: 8219386457808491160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aves_7
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 543
+        width: 161
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2efb760a9d7cc780800000000000000
+      internalID: -8661409882853081555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aves_8
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 354
+        width: 181
+        height: 199
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea1c21b3c926b5570800000000000000
+      internalID: 8456461148463743406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aves_9
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 448
+        width: 93
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6bea7f8da7b565fe0800000000000000
+      internalID: -1200671667463409994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aves_10
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 408
+        width: 172
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ce5da3724609f910800000000000000
+      internalID: 1871534002627501765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aves_11
+      rect:
+        serializedVersion: 2
+        x: 613
+        y: 415
+        width: 105
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9815e4c61a696d0b0800000000000000
+      internalID: -5704206257967181431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aves_12
+      rect:
+        serializedVersion: 2
+        x: 674
+        y: 496
+        width: 77
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2ee55620b0005850800000000000000
+      internalID: 6363587030031920686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aves_13
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 389
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 174311f6216521950800000000000000
+      internalID: 6418287056129176689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aves_14
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 342
+        width: 124
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63815452fee119040800000000000000
+      internalID: 4652533902521735222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aves_15
+      rect:
+        serializedVersion: 2
+        x: 607
+        y: 240
+        width: 181
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6eb621c518af5a210800000000000000
+      internalID: 1343755497342397414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aves_16
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 290
+        width: 9
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7927550fdc749100800000000000000
+      internalID: 113853187900254591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aves_17
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 167
+        width: 138
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2694b973640024c40800000000000000
+      internalID: 5494954796926060898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aves_18
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 214
+        width: 141
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7aaef8845cacbb310800000000000000
+      internalID: 1421953056040282791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aves_19
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 176
+        width: 99
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20b4e394fafdc32c0800000000000000
+      internalID: -4450436387807802622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aves_20
+      rect:
+        serializedVersion: 2
+        x: 619
+        y: 109
+        width: 168
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08bc2b740b38d5440800000000000000
+      internalID: 4926238360553573248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aves_21
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 0
+        width: 154
+        height: 151
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de5a6cfaa632551d0800000000000000
+      internalID: -3362742605639670291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aves_22
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 11
+        width: 179
+        height: 149
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 603b3c839eff6e410800000000000000
+      internalID: 1506172502546821894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aves_23
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 9
+        width: 161
+        height: 151
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc4d01db1c958a020800000000000000
+      internalID: 2353229493936641228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aves_24
+      rect:
+        serializedVersion: 2
+        x: 502
+        y: 10
+        width: 121
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b62e1580d99f5f7a0800000000000000
+      internalID: -6343890047236709781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aves_25
+      rect:
+        serializedVersion: 2
+        x: 638
+        y: 13
+        width: 162
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2eeb124f8a8c28ed0800000000000000
+      internalID: -2413145822341251358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Aves_0: 935418818315367237
+      Aves_1: -5356342919058939882
+      Aves_10: 1871534002627501765
+      Aves_11: -5704206257967181431
+      Aves_12: 6363587030031920686
+      Aves_13: 6418287056129176689
+      Aves_14: 4652533902521735222
+      Aves_15: 1343755497342397414
+      Aves_16: 113853187900254591
+      Aves_17: 5494954796926060898
+      Aves_18: 1421953056040282791
+      Aves_19: -4450436387807802622
+      Aves_2: 3878367175819962904
+      Aves_20: 4926238360553573248
+      Aves_21: -3362742605639670291
+      Aves_22: 1506172502546821894
+      Aves_23: 2353229493936641228
+      Aves_24: -6343890047236709781
+      Aves_25: -2413145822341251358
+      Aves_3: -6856268979468909740
+      Aves_4: -6192938590807084286
+      Aves_5: 176299989942675164
+      Aves_6: 8219386457808491160
+      Aves_7: -8661409882853081555
+      Aves_8: 8456461148463743406
+      Aves_9: -1200671667463409994
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

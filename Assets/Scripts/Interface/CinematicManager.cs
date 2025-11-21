@@ -36,6 +36,15 @@ public class CinematicManager : MonoBehaviour
 
     private bool isSkipping = false;
 
+    private Checkpoint checkpoint;
+
+    [Header("Configuración de coordenadas de Checkpoint")]
+    [Tooltip("Posicion x,y,z del checkpoint a guardar al finalizar la cinemática.")]
+    [SerializeField] private float posX = -250f;
+    [SerializeField] private float posY = -32f;
+    [SerializeField] private float posZ = 0f;
+    
+
     // --- NUEVO MÉTODO: Se llama cuando el objeto se activa ---
     private void OnEnable()
     {
@@ -61,7 +70,7 @@ public class CinematicManager : MonoBehaviour
             nextDialogueAction = nextDialogueActionReference.action;
             // Habilitamos la acción aquí también por si el objeto ya estaba activo
             // antes de que Start() se ejecutara.
-            nextDialogueAction.Enable(); 
+            nextDialogueAction.Enable();
         }
         if (displayImage == null)
         {
@@ -75,7 +84,7 @@ public class CinematicManager : MonoBehaviour
             LoadNextScene();
             return;
         }
-        
+
         if (blackOverlay != null)
         {
             Color c = blackOverlay.color;
@@ -84,7 +93,12 @@ public class CinematicManager : MonoBehaviour
 
         StartCoroutine(PlayCinematic());
     }
-    
+
+    void Awake()
+    {
+        checkpoint = GetComponent<Checkpoint>();
+    }
+
     private void Update()
     {
         // Esta comprobación ahora debería funcionar correctamente.
@@ -165,6 +179,12 @@ public class CinematicManager : MonoBehaviour
     
     private void LoadNextScene()
     {
+        Vector3 position = new Vector3(posX, posY, posZ);
+        if (checkpoint != null)
+        {
+            GameData data = checkpoint.SaveCheckpoint(1, 2, position, sceneToLoad);
+            SceneManager.LoadScene(data.lastScene);
+        }
         SceneManager.LoadScene(sceneToLoad);
     }
 }

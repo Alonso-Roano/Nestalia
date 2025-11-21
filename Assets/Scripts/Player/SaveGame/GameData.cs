@@ -33,6 +33,16 @@ public class GameData
     public int collectedItems;     // objetos recolectados
     public int lastScene;   // última escena cargada
 
+    // items recolectados específicos
+    public List<int> collectedUniqueItems = new List<int>();
+
+    // Dialogos vistos
+    public List<string> seenDialogues = new List<string>();
+
+    // Items actualmente en el inventario del jugador (para el carrusel)
+    public List<int> currentInventoryItems = new List<int>();
+
+
     // === CONSTRUCTOR POR DEFECTO ===
     public GameData()
     {
@@ -53,5 +63,9 @@ public class GameData
         deaths = 0;
         collectedItems = 0;
         lastScene = 1;
+
+        collectedUniqueItems = new List<int>();
+        currentInventoryItems = new List<int>();
+        seenDialogues = new List<string>();
     }
 }

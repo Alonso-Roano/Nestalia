@@ -1,34 +1,32 @@
 using UnityEngine;
 using System.Collections;
 
-// Asegura que los otros componentes necesarios estén presentes
-[RequireComponent(typeof(EnemyMovement))]
 public class EnemyHealth : MonoBehaviour, AttackHitbox.IEnemyDamageable
 {
-    [Header("Estadísticas de Salud")]
-    [SerializeField] private int maxHealth = 3;
-    [SerializeField] private float invulnerabilityTime = 0.5f;
+    [Header("Estadísticas de Salud")]
+    [SerializeField] private int maxHealth = 3;
+    [SerializeField] private float invulnerabilityTime = 0.5f;
 
-    [Header("Knockback al Recibir Daño")]
-    [SerializeField] private float knockbackForce = 10f;
-    [SerializeField] private float knockbackUpForce = 5f;
+    [Header("Knockback al Recibir Daño")]
+    [SerializeField] private float knockbackForce = 10f;
+    [SerializeField] private float knockbackUpForce = 5f;
 
-    [Header("Efectos de Muerte")]
-    [SerializeField] private ParticleSystem deathParticlePrefab;
-    [SerializeField] private float deathAnimationDelay = 0.3f; 
+    [Header("Efectos de Muerte")]
+    [SerializeField] private ParticleSystem deathParticlePrefab;
+    [SerializeField] private float deathAnimationDelay = 0.3f;
 
-    private int currentHealth;
-    private bool isInvulnerable = false;
-    private bool isDead = false; // Flag para evitar que la muerte se ejecute varias veces
-    private SpriteRenderer spriteRenderer;
-    private EnemyMovement enemyMovement;
+    private int currentHealth;
+    private bool isInvulnerable = false;
+    private bool isDead = false;
+    private SpriteRenderer spriteRenderer;
+    private EnemyMovement enemyMovement;
 
-    private void Awake()
-    {
-        currentHealth = maxHealth;
-        spriteRenderer = GetComponent<SpriteRenderer>();
-        enemyMovement = GetComponent<EnemyMovement>();
-    }
+    private void Awake()
+    {
+        currentHealth = maxHealth;
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        enemyMovement = GetComponent<EnemyMovement>();
+    }
 
     public void TakeDamage(int damage, Vector2 damageSourcePosition)
     {
@@ -37,7 +35,7 @@ public class EnemyHealth : MonoBehaviour, AttackHitbox.IEnemyDamageable
         currentHealth -= damage;
 
         Vector2 knockbackDirection = ((Vector2)transform.position - damageSourcePosition).normalized;
-        enemyMovement.ApplyKnockback(knockbackDirection, knockbackForce, knockbackUpForce);
+        ApplyKnockback(knockbackDirection, knockbackForce, knockbackUpForce);
 
         if (currentHealth <= 0)
         {
@@ -49,82 +47,107 @@ public class EnemyHealth : MonoBehaviour, AttackHitbox.IEnemyDamageable
         }
     }
 
+public void ApplyKnockback(Vector2 direction, float force, float upForce)
+    {
+        var rb = GetComponent<Rigidbody2D>();
+        if (rb == null) return;
+
+        // Detener cualquier movimiento actual para que el knockback sea efectivo
+        rb.linearVelocity = Vector2.zero;
+        
+        Vector2 forceVector = new Vector2(direction.x * force, upForce);
+        rb.AddForce(forceVector, ForceMode2D.Impulse);
+    }
+
     private void Die()
     {
         if (isDead) return;
         isDead = true;
 
-        // Desactivamos componentes para que el enemigo deje de interactuar
-        // Esto incluye la IA, colliders y el movimiento.
-        var aiScript = GetComponent<BlettleAI>(); // Asume que el script de IA se llama BlettleAI
-        if (aiScript != null) aiScript.enabled = false;
+        DisableAllEnemyScripts();
+        DeactivateChildren();
+
         var DamageableScript = GetComponent<DamageHitBox>();
-        if (DamageableScript != null) DamageableScript.enabled = false;
-        
+        if (DamageableScript != null) Destroy(DamageableScript);
+        var betleAI = GetComponent<BlettleAI>();
+        if (betleAI != null) Destroy(betleAI);
+        var enemyAttack_Lunge = GetComponent<EnemyAttack_Lunge>();
+        if (enemyAttack_Lunge != null) Destroy(enemyAttack_Lunge);
+        var enemyMovement = GetComponent<EnemyMovement>();
+        if (enemyMovement != null) Destroy(enemyMovement);
+
         var rb2d = GetComponent<Rigidbody2D>();
         if (rb2d != null)
         {
             rb2d.linearVelocity = Vector2.zero;
-            rb2d.useFullKinematicContacts = true; // Evita que la gravedad o fuerzas lo afecten
+            Destroy(rb2d);
         }
 
         var collider = GetComponent<Collider2D>();
-        if (collider != null) collider.enabled = false;
-        
-        enemyMovement.Stop();
-        
-        // Iniciamos la corrutina que maneja la animación y los efectos
+        if (collider != null)
+        {
+            Destroy(collider);
+        }
+
         StartCoroutine(DieRoutine());
     }
 
-    /// <summary>
-    /// Corrutina que maneja la animación de muerte, partículas y destrucción del objeto.
-    /// </summary>
-    private IEnumerator DieRoutine()
+    private void DisableAllEnemyScripts()
     {
-        // 1. Voltear el modelo 180 grados sobre el eje Z
+        MonoBehaviour[] scripts = GetComponents<MonoBehaviour>();
+        foreach (MonoBehaviour script in scripts)
+        {
+            if (script != this)
+            {
+                script.enabled = false;
+            }
+        }
+    }
+    
+    private void DeactivateChildren()
+    {
+        foreach (Transform child in transform)
+        {
+            child.gameObject.SetActive(false);
+        }
+    }
+
+    private IEnumerator DieRoutine()
+    {
         transform.rotation = Quaternion.Euler(0, 0, 180f);
 
-        // 2. Esperar un momento para que el volteo sea visible
-        yield return new WaitForSeconds(deathAnimationDelay);
+        Vector3 currentPosition = transform.position;
+        currentPosition.y -= 20f;
+        transform.position = currentPosition;
 
-        // 3. Activar partículas y ocultar el sprite
-        if (deathParticlePrefab != null)
-        {
-            // Ocultar el sprite original
-            if (spriteRenderer != null)
-            {
-                spriteRenderer.enabled = false;
-            }
+        yield return new WaitForSeconds(deathAnimationDelay);
 
-            // Crear la instancia del sistema de partículas en la posición del enemigo
-            ParticleSystem deathParticles = Instantiate(deathParticlePrefab, transform.position, Quaternion.identity);
-            
-            // Calculamos la duración total del efecto para saber cuánto esperar
-            float particleDuration = deathParticles.main.duration + deathParticles.main.startLifetime.constantMax;
-            
-            // Esperamos a que las partículas terminen
-            yield return new WaitForSeconds(particleDuration);
-        }
+        if (deathParticlePrefab != null)
+        {
+            ParticleSystem deathParticles = Instantiate(deathParticlePrefab, transform.position, Quaternion.identity);
+            
+            float particleDuration = deathParticles.main.duration + deathParticles.main.startLifetime.constantMax;
+            
+            yield return new WaitForSeconds(particleDuration);
+        }
 
-        // 4. Finalmente, destruir el objeto del enemigo
-        Destroy(gameObject);
-    }
+        this.enabled = false;
+    }
 
-    private IEnumerator BecomeInvulnerable()
-    {
-        isInvulnerable = true;
-        if (spriteRenderer != null)
-        {
-            Color originalColor = spriteRenderer.color;
-            for (int i = 0; i < 3; i++)
-            {
-                spriteRenderer.color = Color.red;
-                yield return new WaitForSeconds(invulnerabilityTime / 6);
-                spriteRenderer.color = originalColor;
-                yield return new WaitForSeconds(invulnerabilityTime / 6);
-            }
-        }
-        isInvulnerable = false;
-    }
+    private IEnumerator BecomeInvulnerable()
+    {
+        isInvulnerable = true;
+        if (spriteRenderer != null)
+        {
+            Color originalColor = spriteRenderer.color;
+            for (int i = 0; i < 3; i++)
+            {
+                spriteRenderer.color = Color.red;
+                yield return new WaitForSeconds(invulnerabilityTime / 6);
+                spriteRenderer.color = originalColor;
+                yield return new WaitForSeconds(invulnerabilityTime / 6);
+            }
+        }
+        isInvulnerable = false;
+    }
 }

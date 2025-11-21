@@ -48,10 +48,12 @@ public class MenuCarrusel : MonoBehaviour
     private bool isBouncing = false;
     private Coroutine showBackgroundCoroutine;
     public float backgroundDisplayTime = 2f;
+    public static event System.Action<int> OnKeyItemUsed;
 
     void OnEnable()
     {
         PlayerInventory.OnItemAdded += AddItemToMenu;
+        SlidingDoor.OnDoorUnlocked += HandleItemConsumption;
     }
 
     void OnDisable()
@@ -92,7 +94,6 @@ public class MenuCarrusel : MonoBehaviour
             Debug.LogError("PlayerInventory no está asignado en el MenuCarrusel.");
             return;
         }
-
         foreach (int itemID in controller.Inventory.itemIDs)
         {
             CreateMenuItem(itemID);
@@ -218,6 +219,24 @@ public class MenuCarrusel : MonoBehaviour
         yield return new WaitForSeconds(scrollSpeed);
         inputDelay = false;
     }
+    public void OnScroll(InputAction.CallbackContext context)
+    {
+        if (!context.performed || inputDelay || isBouncing) return;
+
+        Vector2 scroll = context.ReadValue<Vector2>();
+
+        if (scroll.y > 0)
+        {
+            // Scroll UP → Navegar a la IZQUIERDA
+            Navigate(-1);
+        }
+        else if (scroll.y < 0)
+        {
+            // Scroll DOWN → Navegar a la DERECHA
+            Navigate(1);
+        }
+    }
+
 
     void SelectItem(int index)
     {
@@ -311,6 +330,65 @@ public class MenuCarrusel : MonoBehaviour
         else
         {
             Debug.Log($"Ítem seleccionado: {selectedItemName} (ID: {selectedItemID}) - No es un consumible de vida.");
+            PlayerHealth playerHealth = controller.GetComponent<PlayerHealth>();
+            if (playerHealth == null)
+            {
+                Debug.LogError("No se encontró el componente PlayerHealth en el jugador.");
+                return;
+            }
+
+            if (showBackgroundCoroutine != null)
+            {
+                StopCoroutine(showBackgroundCoroutine);
+            }
+            showBackgroundCoroutine = StartCoroutine(ShowBackgroundImageTemporarily(selectedItemID));
+            if (selectedItemID == 24)
+            {
+                OnKeyItemUsed?.Invoke(selectedItemID);
+            }
+        }
+    }
+    private void HandleItemConsumption(int itemID)
+    {
+        int indexToRemove = controller.Inventory.itemIDs.IndexOf(itemID);
+
+        if (indexToRemove == -1)
+        {
+            Debug.LogWarning($"La puerta intentó consumir el item {itemID}, pero no se encontró en el inventario.");
+            return;
+        }
+
+        Debug.Log($"La puerta consumió el item {itemID}. Eliminando del menú.");
+
+        controller.Inventory.RemoveAt(indexToRemove);
+
+        GameObject itemToDestroy = items[indexToRemove];
+        items.RemoveAt(indexToRemove);
+        itemMasks.RemoveAt(indexToRemove);
+        Destroy(itemToDestroy);
+
+        if (items.Count > 0)
+        {
+            currentIndex = Mathf.Clamp(currentIndex, 0, items.Count - 1);
+        }
+        else
+        {
+            currentIndex = 0;
+        }
+
+        UpdateLayoutAndVisuals();
+
+        if (items.Count > 0)
+        {
+            ShowIndexIndicator();
+        }
+        else
+        {
+            if (indexDisplayContainer != null)
+            {
+                if (showIndexCoroutine != null) StopCoroutine(showIndexCoroutine);
+                indexDisplayContainer.SetActive(false);
+            }
         }
     }
 

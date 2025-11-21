@@ -5,31 +5,40 @@ using UnityEngine.InputSystem;
 public class PlayerMovement : MonoBehaviour
 {
     private Rigidbody2D rb;
+    
+    [Header("Componentes")]
+    [SerializeField] private Animator animator;
+    [SerializeField] private AbilityUIController abilityUIController; 
 
-    [Header("Animation")]
-    public Animator animator;
+    [Header("Movimiento Horizontal")]
+    [SerializeField] public float moveForce = 1f;
+    [SerializeField] private float moveForceMultiplier = 5000f;
 
-    [Header("Movimiento")]
-    public float jumpForce = 1f;
-    public float wallSlideSpeed = 80f;
-    public float slowFallMultiplier = 1f;
-    public float wallJumpHorizontal = 1f;
-    public float wallJumpVertical = 1f;
-    public float moveForce = 1f;
-    public float variableJumpMultiplier = 0.01f;
-    public float coyoteTime = 0.25f;
-    public float jumpBufferTime = 0.2f;
+    [Header("Salto")]
+    [SerializeField] public float jumpForce = 1f;
+    [SerializeField] private float jumpForceMultiplier = 33f;
+    [SerializeField] private float variableJumpMultiplier = 0.5f;
+    [SerializeField] private float coyoteTime = 0.25f;
+    [SerializeField] private float jumpBufferTime = 0.2f;
+
+    [Header("Salto de Pared")]
+    [SerializeField] private float wallSlideSpeed = 2f;
+    [SerializeField] private float wallJumpHorizontal = 5f;
+    [SerializeField] private float wallJumpVertical = 10f;
+    [SerializeField] private Vector2 wallJumpAngle = new Vector2(1.0f, 1.2f);
+
+    [Header("Caída Lenta (Glide)")]
+    [SerializeField] public float slowFallSpeed = 2f; 
 
     [Header("Detección")]
-    public Transform groundCheck;
-    public float groundCheckRadius = 1f;
-    public LayerMask groundLayer;
-    public Transform wallCheck;
-    public float wallCheckDistance = 2.3f;
-    public LayerMask wallLayer;
+    [SerializeField] private Transform groundCheck;
+    [SerializeField] private float groundCheckRadius = 1f;
+    [SerializeField] private LayerMask groundLayer;
+    [SerializeField] private Transform wallCheck;
+    [SerializeField] private float wallCheckDistance = 2.3f;
+    [SerializeField] private LayerMask wallLayer;
 
-    [Header("Habilidades activas")]
-    // aqui activo/desactivo habilidades
+    [Header("Habilidades Activas")]
     public bool canUseJump = true;
     public bool canUseDoubleJump = true;
     public bool canUseWallJump = true;
@@ -37,58 +46,70 @@ public class PlayerMovement : MonoBehaviour
     public bool canUseDash = true;
     public bool canUseSlowFall = true;
 
-    // Variables internas del script
-    private bool isGrounded;
-    private bool isTouchingWall;
-    private bool canDoubleJump;
-    private bool isWallClinging;
-    private bool wasGrounded;
-    private bool jumpedThisGrounded;
-    private bool isDashing;
     private float horizontalInput;
     private float coyoteTimeCounter;
     private float jumpBufferCounter;
 
-    private AbilityUIController abilityUIController;
+    private bool isGrounded;
+    private bool isTouchingWall;
+    private bool isWallClinging;
+    private bool canDoubleJumpInternal;
+    private bool jumpedThisGrounded;
+    private bool isJumpHeld;
+    private bool isSlowFallHeld;
+    
+    private bool lastCanUseJump;
+    private bool lastCanUseDoubleJump;
+    private bool lastCanUseWallJump;
+    private bool lastCanUseWallCling;
+    private bool lastCanUseDash;
+    private bool lastCanUseSlowFall;
 
-    void Awake()
+    private void Awake()
     {
-        // aqui guardo la referencia para no estar llamando GetComponent cada rato
         rb = GetComponent<Rigidbody2D>();
-        abilityUIController = FindAnyObjectByType<AbilityUIController>();
+        
+        if (animator == null)
+            animator = GetComponent<Animator>(); 
+            
+        canDoubleJumpInternal = canUseDoubleJump;
+        
+        UpdateAbilityAvailabilityUI();
+        CacheAbilityStates();
+        UpdateUIState();
     }
 
     private void Update()
     {
-        // El Update solo se encarga de lógica no física, como los contadores de tiempo.
-        // Es muy ligero y eficiente.
         if (Time.timeScale == 0f) return;
 
+        if (coyoteTimeCounter > 0)
+            coyoteTimeCounter -= Time.deltaTime;
+        
         if (jumpBufferCounter > 0)
             jumpBufferCounter -= Time.deltaTime;
-        
-        coyoteTimeCounter = isGrounded ? coyoteTime : coyoteTimeCounter - Time.deltaTime;
+            
+        CheckForAbilityChanges();
     }
 
     private void FixedUpdate()
     {
-        // FixedUpdate se usa para toda la lógica de físicas para consistencia.
         if (Time.timeScale == 0f) return;
 
-        // 1. Revisamos el entorno
         CheckSurroundings();
-        
-        // 2. Ejecutamos las habilidades
-        MoveHorizontal();
-        if (canUseJump) HandleJump();
-        if (canUseWallCling) HandleWallCling();
-        if (canUseSlowFall) HandleSlowFall();
+        HandleGroundedState();
+        HandleWallClingState(); 
+        HandleMovement();
+        HandleSlowFall(); 
+        HandleVariableJump();
 
-        // 3. Actualizamos el Animator
+        if (canUseJump)
+            HandleJump();
+
         UpdateAnimator();
+        UpdateUIState();
     }
 
-    // método que viene del sistema de Input para moverme
     public void OnMove(InputAction.CallbackContext context)
     {
         if (Time.timeScale == 0f)
@@ -99,36 +120,66 @@ public class PlayerMovement : MonoBehaviour
         horizontalInput = context.ReadValue<Vector2>().x;
     }
 
-    // salto con buffer y salto variable
     public void OnJump(InputAction.CallbackContext context)
     {
-        if (Time.timeScale == 0f) return;
-
-        if (!canUseJump) return; // si desactivo salto, no hago nada
+        if (Time.timeScale == 0f || !canUseJump) return;
 
         if (context.performed)
+        {
             jumpBufferCounter = jumpBufferTime;
-
-        // si suelto el botón mientras voy hacia arriba, corto el salto
-        if (context.canceled && rb.linearVelocity.y > 0)
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, rb.linearVelocity.y * variableJumpMultiplier);
+            isJumpHeld = true;
+        }
+        else if (context.canceled)
+        {
+            isJumpHeld = false;
+        }
     }
 
-    // dash on/off
-    public void OnDash(InputAction.CallbackContext context)
+    public void OnDash(InputAction.CallbackContext context) 
     {
-        if (Time.timeScale == 0f) return;
-
-        if (!canUseDash) return; // si dash está apagado, ignoro la entrada
-        isDashing = context.performed;
+        if (Time.timeScale == 0f || !canUseSlowFall) return;
+        
+        if (context.started)
+            isSlowFallHeld = true;
+        else if (context.canceled)
+            isSlowFallHeld = false;
     }
 
-    private void MoveHorizontal()
+    private void CheckSurroundings()
     {
-        const float forceMultiplier = 5000f;
-        rb.AddForce(Vector2.right * horizontalInput * moveForce * forceMultiplier * Time.fixedDeltaTime, ForceMode2D.Force);
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
+        isTouchingWall = Physics2D.Raycast(wallCheck.position, Vector2.right * Mathf.Sign(horizontalInput), wallCheckDistance, wallLayer);
+    }
 
-        // giro al personaje dependiendo de hacia dónde me muevo
+    private void HandleGroundedState()
+    {
+        if (isGrounded)
+        {
+            coyoteTimeCounter = coyoteTime;
+            jumpedThisGrounded = false;
+            
+            if (canUseDoubleJump)
+                canDoubleJumpInternal = true;
+        }
+    }
+
+    private void HandleWallClingState()
+    {
+        isWallClinging = canUseWallCling && isTouchingWall && !isGrounded && horizontalInput != 0;
+
+        if (isWallClinging)
+        {
+            float limitedVelocity = Mathf.Max(rb.linearVelocity.y, -wallSlideSpeed);
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, limitedVelocity);
+        }
+    }
+
+    private void HandleMovement()
+    {
+        if (isWallClinging) return; 
+
+        rb.AddForce(Vector2.right * horizontalInput * moveForce * moveForceMultiplier * Time.fixedDeltaTime, ForceMode2D.Force);
+
         float originalScaleX = Mathf.Abs(transform.localScale.x);
         if (horizontalInput > 0)
             transform.localScale = new Vector3(originalScaleX, transform.localScale.y, transform.localScale.z);
@@ -138,123 +189,129 @@ public class PlayerMovement : MonoBehaviour
 
     private void HandleSlowFall()
     {
-        bool isCurrentlyPlanning = !isGrounded && !isWallClinging && rb.linearVelocity.y < 0 && isDashing;
-        if (isCurrentlyPlanning)
+        bool isGliding = canUseSlowFall && (isSlowFallHeld || isJumpHeld) && !isGrounded && !isWallClinging && rb.linearVelocity.y < 0;
+        
+        if (isGliding)
         {
-            float slowFallForce = Mathf.Abs(rb.linearVelocity.y) * rb.mass * -(1 - (slowFallMultiplier * 10));
-            rb.AddForce(Vector2.up * slowFallForce, ForceMode2D.Force);
+            float limitedVelocity = Mathf.Max(rb.linearVelocity.y, -slowFallSpeed);
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, limitedVelocity);
+        }
+    }
+    
+    private void HandleVariableJump()
+    {
+        if (!isJumpHeld && rb.linearVelocity.y > 0)
+        {
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, rb.linearVelocity.y * variableJumpMultiplier);
         }
     }
 
     private void HandleJump()
     {
-        if (jumpBufferCounter <= 0f) return;
+        if (jumpBufferCounter <= 0f) return; 
 
         bool jumped = false;
 
-        // coyote time (me da chance de saltar aunque ya no esté tocando piso)
         if (coyoteTimeCounter > 0f && !jumpedThisGrounded)
         {
-            DoJump(Vector2.up * jumpForce);
-            if (animator != null)
-            {
-                animator.SetTrigger("Jump");
-            }
-            jumpedThisGrounded = true;
+            DoJump(Vector2.up);
+            if (animator != null) animator.SetTrigger("Jump");
+            jumpedThisGrounded = true; 
             jumped = true;
         }
-        // wall jump
         else if (canUseWallJump && isWallClinging)
         {
             float wallDirection = Mathf.Sign(horizontalInput);
-            Vector2 jumpDir = new Vector2((-wallDirection * wallJumpHorizontal) / 1.7f, wallJumpVertical * 1.2f);
-            DoJump(jumpDir);
+            Vector2 jumpDir = new Vector2(
+                -wallDirection * wallJumpHorizontal * wallJumpAngle.x, 
+                wallJumpVertical * wallJumpAngle.y
+            );
+            
+            DoJump(jumpDir, false); 
+            if (animator != null) animator.SetTrigger("WallJump");
             jumped = true;
-            if (animator != null)
-            {
-                animator.SetTrigger("WallJump");
-            }
         }
-        // double jump
-        else if (canUseDoubleJump && canDoubleJump)
+        else if (canUseDoubleJump && canDoubleJumpInternal && !isGrounded)
         {
-            if (animator != null)
-            {
-                animator.SetTrigger("DoubleJump");
-            }
-            DoJump(Vector2.up * jumpForce);
-            canDoubleJump = false;
+            DoJump(Vector2.up);
+            if (animator != null) animator.SetTrigger("DoubleJump");
+            canDoubleJumpInternal = false;
             jumped = true;
         }
 
         if (jumped)
-            jumpBufferCounter = 0f;
-    }
-
-    private void CheckSurroundings()
-    {
-        // chequeo si estoy tocando suelo
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius * 4, groundLayer);
-
-        if (isGrounded && !wasGrounded)
         {
-            // si tengo el doble salto activo, lo reseteo
-            if (canUseDoubleJump) canDoubleJump = true;
-            jumpedThisGrounded = false;
-        }
-        wasGrounded = isGrounded;
-
-        // manejo coyote time
-        coyoteTimeCounter = isGrounded ? coyoteTime : coyoteTimeCounter - Time.deltaTime;
-
-        // chequeo si estoy tocando pared
-        isTouchingWall = Physics2D.Raycast(wallCheck.position, Vector2.right * Mathf.Sign(horizontalInput), wallCheckDistance * 25, wallLayer);
-        isWallClinging = canUseWallCling && isTouchingWall && !isGrounded && horizontalInput != 0;
-
-        abilityUIController.SetClimbColor(isTouchingWall);
-        abilityUIController.SetDoubleJumpColor(canDoubleJump);
-
-        if (animator != null)
-        {
-            animator.SetBool("IsWallClinging", isWallClinging);
+            jumpBufferCounter = 0f; 
+            coyoteTimeCounter = 0f;
         }
     }
 
-    private void HandleWallCling()
+    private void DoJump(Vector2 direction, bool resetYVelocity = true)
     {
-        // controlo el "slide" cuando me pego a una pared
-        float slideLimit = -(wallSlideSpeed * 400);
-        if (isWallClinging && rb.linearVelocity.y < slideLimit)
-        {
-            float slideForce = (slideLimit - rb.linearVelocity.y) * rb.mass;
-            rb.AddForce(Vector2.up * slideForce, ForceMode2D.Impulse);
-        }
+        if (resetYVelocity)
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0f);
+        
+        rb.AddForce(direction.normalized * jumpForce * jumpForceMultiplier, ForceMode2D.Impulse);
     }
 
-    private void DoJump(Vector2 force)
-    {
-        // reseteo velocidad vertical antes del salto para que sea más consistente
-        rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0f);
-        rb.AddForce(force * 33, ForceMode2D.Impulse);
-    }
-    
     private void UpdateAnimator()
     {
+        if (animator == null) return;
+
         animator.SetFloat("Movement", Mathf.Abs(rb.linearVelocity.x));
         animator.SetBool("IsWallClinging", isWallClinging);
 
-        bool isFalling = !isGrounded && !isWallClinging && rb.linearVelocity.y < 0;
+        bool isFalling = !isGrounded && !isWallClinging && rb.linearVelocity.y < 1f;
         animator.SetBool("IsFalling", isFalling);
 
-        bool isGliding = !isGrounded && !isWallClinging && rb.linearVelocity.y < 0 && isDashing;
-        animator.SetBool("IsPlanning", isGliding); // "Planning" era tu nombre original, lo mantengo
+        bool isGliding = canUseSlowFall && (isSlowFallHeld || isJumpHeld) && isFalling;
+        animator.SetBool("IsPlanning", isGliding);
+    }
 
-        // Actualizar UI (si existe)
-        if (abilityUIController != null)
+    private void UpdateUIState()
+    {
+        if (abilityUIController == null) return;
+
+        abilityUIController.SetClimbColor(isTouchingWall);
+        abilityUIController.SetDoubleJumpColor(canDoubleJumpInternal);
+        
+        bool isGliding = canUseSlowFall && (isSlowFallHeld || isJumpHeld) && !isGrounded && !isWallClinging && rb.linearVelocity.y < 0;
+        abilityUIController.SetGlideColor(isGliding);
+    } 
+    
+    private void CacheAbilityStates()
+    {
+        lastCanUseJump = canUseJump;
+        lastCanUseDoubleJump = canUseDoubleJump;
+        lastCanUseWallJump = canUseWallJump;
+        lastCanUseWallCling = canUseWallCling;
+        lastCanUseDash = canUseDash;
+        lastCanUseSlowFall = canUseSlowFall;
+    }
+
+    private void UpdateAbilityAvailabilityUI()
+    {
+        if (abilityUIController == null) return;
+
+        abilityUIController.SetDoubleJumpVisible(canUseDoubleJump);
+        abilityUIController.SetClimbVisible(canUseWallCling);
+        abilityUIController.SetGlideVisible(canUseSlowFall);
+    }
+    
+    private void CheckForAbilityChanges()
+    {
+        bool changed = false;
+        if (lastCanUseJump != canUseJump) changed = true;
+        if (lastCanUseDoubleJump != canUseDoubleJump) changed = true;
+        if (lastCanUseWallJump != canUseWallJump) changed = true;
+        if (lastCanUseWallCling != canUseWallCling) changed = true;
+        if (lastCanUseDash != canUseDash) changed = true;
+        if (lastCanUseSlowFall != canUseSlowFall) changed = true;
+
+        if (changed)
         {
-            abilityUIController.SetClimbColor(isTouchingWall);
-            abilityUIController.SetDoubleJumpColor(canDoubleJump);
-            abilityUIController.SetGlideColor(isFalling || isDashing);
+            UpdateAbilityAvailabilityUI();
+            CacheAbilityStates();
         }
     }
 }

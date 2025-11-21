@@ -5,7 +5,7 @@ using UnityEngine;
 public class WorldItem : MonoBehaviour
 {
     [Header("Id del objeto")]
-    [SerializeField] private int idItem = 0; 
+    [SerializeField] private int idItem = 0;
     // --- NUEVO: Campos para configurar el comportamiento en el Inspector ---
     [Header("Efecto de Flote")]
     [SerializeField] private float hoverSpeed = 2f;    // Velocidad del movimiento vertical
@@ -25,16 +25,15 @@ public class WorldItem : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         // Guardamos la posición inicial en el primer frame.
         initialPosition = transform.position;
-        Debug.Log("HOla");
         Initialize(idItem);
     }
-    
+
     // --- NUEVO: Lógica del movimiento en Update ---
     void Update()
     {
         // Calculamos la nueva posición Y usando una onda sinusoidal para un movimiento suave.
         float newY = initialPosition.y + Mathf.Sin(Time.time * hoverSpeed) * hoverHeight;
-        
+
         // Aplicamos la nueva posición. Mantenemos la X y Z originales.
         transform.position = new Vector3(transform.position.x, newY, transform.position.z);
     }
@@ -44,11 +43,26 @@ public class WorldItem : MonoBehaviour
     /// </summary>
     public void Initialize(int itemID)
     {
-        // --- MODIFICADO: Guardamos el ID para usarlo después ---
-        this.itemID = itemID; 
+        this.itemID = itemID;
 
+        GameData data = DataManager.Instance.LoadGame();
+        
+        // --- CORRECCIÓN DE LÓGICA ---
+        // 1. Revisa si el DataManager (o el PlayerStatsManager) ya tiene este ID
+        // Usamos PlayerStatsManager.Instance.fruits que está en memoria
+        if (PlayerStatsManager.Instance != null && PlayerStatsManager.Instance.fruits.Contains(this.itemID))
+        {
+            Debug.Log($"El ítem con ID {this.itemID} ya fue recogido (según StatsManager). Desactivando.");
+            gameObject.SetActive(false);
+            return;
+        }
+        
+        // 2. ¡NO AÑADIR LA FRUTA AQUÍ!
+        // PlayerStatsManager.Instance.AddFruit(this.itemID); // <-- ELIMINA ESTA LÍNEA DE AQUÍ
+
+        // 3. El resto de la inicialización está bien
         ItemBlueprint blueprint = ItemFactory.GetBlueprint(this.itemID);
-        if (blueprint == null) 
+        if (blueprint == null)
         {
             Debug.LogError($"No se pudo inicializar WorldItem porque el ID {this.itemID} no es válido.");
             gameObject.SetActive(false);
@@ -57,12 +71,11 @@ public class WorldItem : MonoBehaviour
 
         spriteRenderer.sprite = ItemFactory.GetSpriteForItem(this.itemID);
 
-        // Si ya tiene el componente, lo reutilizamos. Si no, lo añadimos.
         if (!TryGetComponent<ItemProperties>(out properties))
         {
             properties = gameObject.AddComponent<ItemProperties>();
         }
-        
+
         properties.itemName = blueprint.itemName;
         properties.healthRestore = blueprint.healthToRestore;
         properties.ability = blueprint.abilityGranted;
@@ -70,24 +83,27 @@ public class WorldItem : MonoBehaviour
         gameObject.name = blueprint.itemName;
     }
 
-    // --- MODIFICADO: Lógica de recolección mejorada ---
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
-            // 1. Intentamos obtener el script de inventario del jugador.
             if (other.TryGetComponent<PlayerController>(out PlayerController controller))
             {
-                // 2. Si lo encontramos, añadimos nuestro ID al inventario.
+                // 1. Añade al inventario actual (para el carrusel)
                 controller.Inventory.AddItem(this.itemID);
-                
-                // 3. (Feedback) Instanciamos el efecto de partículas si está asignado.
+
+                // 2. --- AÑADIR ESTA LÍNEA AQUÍ ---
+                // Añade a la lista de items ÚNICOS (para que no vuelva a aparecer)
+                // Esto también llamará a SaveStats()
+                PlayerStatsManager.Instance.AddFruit(this.itemID);
+
+                // 3. (Feedback)
                 if (pickupEffectPrefab != null)
                 {
                     Instantiate(pickupEffectPrefab, transform.position, Quaternion.identity);
                 }
-                
-                // 4. (Limpieza) Nos destruimos a nosotros mismos.
+
+                // 4. (Limpieza)
                 Destroy(gameObject);
             }
             else

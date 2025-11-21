@@ -10,7 +10,39 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 40520335228369903, guid: a51734c8d552c83489292670f3cafc2b, type: 3}
       propertyPath: m_Name
-      value: PlataformaDesierto Variant
+      value: Plataforma3
+      objectReference: {fileID: 0}
+    - target: {fileID: 712393939010257207, guid: a51734c8d552c83489292670f3cafc2b, type: 3}
+      propertyPath: m_Size.x
+      value: 0.999998
+      objectReference: {fileID: 0}
+    - target: {fileID: 712393939010257207, guid: a51734c8d552c83489292670f3cafc2b, type: 3}
+      propertyPath: m_Size.y
+      value: 1.0000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 712393939010257207, guid: a51734c8d552c83489292670f3cafc2b, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.0000010281801
+      objectReference: {fileID: 0}
+    - target: {fileID: 712393939010257207, guid: a51734c8d552c83489292670f3cafc2b, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.000000059604645
+      objectReference: {fileID: 0}
+    - target: {fileID: 745488228800438999, guid: a51734c8d552c83489292670f3cafc2b, type: 3}
+      propertyPath: m_Size.x
+      value: 1.0000007
+      objectReference: {fileID: 0}
+    - target: {fileID: 745488228800438999, guid: a51734c8d552c83489292670f3cafc2b, type: 3}
+      propertyPath: m_Size.y
+      value: 1.0000002
+      objectReference: {fileID: 0}
+    - target: {fileID: 745488228800438999, guid: a51734c8d552c83489292670f3cafc2b, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.00000035762787
+      objectReference: {fileID: 0}
+    - target: {fileID: 745488228800438999, guid: a51734c8d552c83489292670f3cafc2b, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.00000011920929
       objectReference: {fileID: 0}
     - target: {fileID: 2628609541495013466, guid: a51734c8d552c83489292670f3cafc2b, type: 3}
       propertyPath: m_LocalPosition.x

@@ -17,7 +17,7 @@ public class Worm : MonoBehaviour
         posicionInicial = transform.position;
     }
 
-    void Update()
+    void FixedUpdate()
     {
         transform.Translate(Vector3.up * velocidad * direccion * Time.deltaTime);
         if (direccion == 1 && transform.position.y >= posicionInicial.y + distanciaSubida)

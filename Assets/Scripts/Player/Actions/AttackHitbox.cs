@@ -30,10 +30,8 @@ public class AttackHitbox : MonoBehaviour
         }
     }
 
-    // Interfaz para que cualquier script de enemigo pueda recibir daño
     public interface IEnemyDamageable
     {
-        // Añadimos el parámetro "damageSourcePosition"
         void TakeDamage(int damage, Vector2 damageSourcePosition);
     }
 }

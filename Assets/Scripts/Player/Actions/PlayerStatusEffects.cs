@@ -42,7 +42,7 @@ public class PlayerStatusEffects : MonoBehaviour
         {
             originalMoveForce = playerMovement.moveForce;
             originalJumpForce = playerMovement.jumpForce;
-            originalSlowFallMultiplier = playerMovement.slowFallMultiplier;
+            originalSlowFallMultiplier = playerMovement.slowFallSpeed;
         }
         if (playerAttack != null)
         {
@@ -102,7 +102,7 @@ public class PlayerStatusEffects : MonoBehaviour
                 break;
             
             case "FeatherFall":
-                if (playerMovement != null) playerMovement.slowFallMultiplier = originalSlowFallMultiplier * blueprint.boostMultiplier;
+                if (playerMovement != null) playerMovement.slowFallSpeed = originalSlowFallMultiplier * blueprint.boostMultiplier;
                 break;
 
             case "KnockbackResist": // Un multiplicador < 1 reduce el knockback
@@ -138,7 +138,7 @@ public class PlayerStatusEffects : MonoBehaviour
         {
             playerMovement.moveForce = originalMoveForce;
             playerMovement.jumpForce = originalJumpForce;
-            playerMovement.slowFallMultiplier = originalSlowFallMultiplier;
+            playerMovement.slowFallSpeed = originalSlowFallMultiplier;
         }
         if (playerAttack != null)
         {

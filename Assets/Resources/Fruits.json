@@ -13,7 +13,7 @@
       "id": 1,
       "itemName": "Mangos",
       "spriteSheetPath": "Items/Fruits",
-      "spriteName": "Fruits_1",
+      "spriteName": "Fruits_24",
       "healthToRestore": 20,
       "change": "none",
       "isAbilityBooster": false
@@ -22,7 +22,7 @@
       "id": 2,
       "itemName": "Tamarindo",
       "spriteSheetPath": "Items/Fruits",
-      "spriteName": "Fruits_2",
+      "spriteName": "Fruits_1",
       "healthToRestore": 10,
       "change": "none",
       "isAbilityBooster": false
@@ -31,7 +31,7 @@
       "id": 3,
       "itemName": "Pera",
       "spriteSheetPath": "Items/Fruits",
-      "spriteName": "Fruits_3",
+      "spriteName": "Fruits_2",
       "healthToRestore": 25,
       "change": "none",
       "isAbilityBooster": false
@@ -40,7 +40,7 @@
       "id": 4,
       "itemName": "Higo",
       "spriteSheetPath": "Items/Fruits",
-      "spriteName": "Fruits_4",
+      "spriteName": "Fruits_3",
       "healthToRestore": 15,
       "change": "none",
       "isAbilityBooster": false
@@ -49,7 +49,7 @@
       "id": 5,
       "itemName": "Mangostán",
       "spriteSheetPath": "Items/Fruits",
-      "spriteName": "Fruits_5",
+      "spriteName": "Fruits_4",
       "healthToRestore": 30,
       "change": "none",
       "isAbilityBooster": false
@@ -58,7 +58,7 @@
       "id": 6,
       "itemName": "Chirimoya",
       "spriteSheetPath": "Items/Fruits",
-      "spriteName": "Fruits_6",
+      "spriteName": "Fruits_5",
       "healthToRestore": 25,
       "change": "none",
       "isAbilityBooster": false
@@ -67,7 +67,7 @@
       "id": 7,
       "itemName": "Lichi",
       "spriteSheetPath": "Items/Fruits",
-      "spriteName": "Fruits_7",
+      "spriteName": "Fruits_6",
       "healthToRestore": 15,
       "change": "none",
       "isAbilityBooster": false
@@ -76,7 +76,7 @@
       "id": 8,
       "itemName": "Fresa",
       "spriteSheetPath": "Items/Fruits",
-      "spriteName": "Fruits_8",
+      "spriteName": "Fruits_7",
       "healthToRestore": 20,
       "change": "none",
       "isAbilityBooster": false
@@ -85,7 +85,7 @@
       "id": 9,
       "itemName": "Frutas de hielo",
       "spriteSheetPath": "Items/Fruits",
-      "spriteName": "Fruits_9",
+      "spriteName": "Fruits_8",
       "healthToRestore": 35,
       "change": "none",
       "isAbilityBooster": false
@@ -94,7 +94,7 @@
       "id": 10,
       "itemName": "Manzana",
       "spriteSheetPath": "Items/Fruits",
-      "spriteName": "Fruits_10",
+      "spriteName": "Fruits_9",
       "healthToRestore": 20,
       "change": "none",
       "isAbilityBooster": false
@@ -103,7 +103,7 @@
       "id": 11,
       "itemName": "Durián",
       "spriteSheetPath": "Items/Fruits",
-      "spriteName": "Fruits_11",
+      "spriteName": "Fruits_10",
       "healthToRestore": 30,
       "change": "none",
       "isAbilityBooster": false
@@ -112,7 +112,7 @@
       "id": 12,
       "itemName": "Aceituna",
       "spriteSheetPath": "Items/Fruits",
-      "spriteName": "Fruits_12",
+      "spriteName": "Fruits_11",
       "healthToRestore": 25,
       "change": "none",
       "isAbilityBooster": false
@@ -121,7 +121,7 @@
       "id": 13,
       "itemName": "Carambola",
       "spriteSheetPath": "Items/Fruits",
-      "spriteName": "Fruits_13",
+      "spriteName": "Fruits_12",
       "healthToRestore": 20,
       "change": "none",
       "isAbilityBooster": false
@@ -130,7 +130,7 @@
       "id": 14,
       "itemName": "Naranja",
       "spriteSheetPath": "Items/Fruits",
-      "spriteName": "Fruits_14",
+      "spriteName": "Fruits_13",
       "healthToRestore": 25,
       "change": "none",
       "isAbilityBooster": false
@@ -139,7 +139,7 @@
       "id": 15,
       "itemName": "Baya de Hielo",
       "spriteSheetPath": "Items/Fruits",
-      "spriteName": "Fruits_15",
+      "spriteName": "Fruits_14",
       "healthToRestore": 30,
       "change": "none",
       "isAbilityBooster": false
@@ -148,7 +148,7 @@
       "id": 16,
       "itemName": "Fruta Roca",
       "spriteSheetPath": "Items/Fruits",
-      "spriteName": "Fruits_16",
+      "spriteName": "Fruits_15",
       "healthToRestore": 25,
       "isAbilityBooster": true,
       "change": "KnockbackResist",
@@ -159,7 +159,7 @@
       "id": 17,
       "itemName": "Fruta Dragón",
       "spriteSheetPath": "Items/Fruits",
-      "spriteName": "Fruits_17",
+      "spriteName": "Fruits_16",
       "healthToRestore": 85,
       "isAbilityBooster": true,
       "change": "DamageUp",
@@ -170,7 +170,7 @@
       "id": 18,
       "itemName": "Fruta Serpiente",
       "spriteSheetPath": "Items/Fruits",
-      "spriteName": "Fruits_18",
+      "spriteName": "Fruits_17",
       "healthToRestore": 70,
       "isAbilityBooster": true,
       "change": "SpeedBoost",
@@ -181,7 +181,7 @@
       "id": 19,
       "itemName": "Fruta Amor",
       "spriteSheetPath": "Items/Fruits",
-      "spriteName": "Fruits_19",
+      "spriteName": "Fruits_18",
       "healthToRestore": 10,
       "isAbilityBooster": true,
       "change": "HealingSpeed",
@@ -192,7 +192,7 @@
       "id": 20,
       "itemName": "Pera de Nieve",
       "spriteSheetPath": "Items/Fruits",
-      "spriteName": "Fruits_20",
+      "spriteName": "Fruits_19",
       "healthToRestore": 80,
       "isAbilityBooster": true,
       "change": "FeatherFall",
@@ -203,7 +203,7 @@
       "id": 21,
       "itemName": "Uva de nieve",
       "spriteSheetPath": "Items/Fruits",
-      "spriteName": "Fruits_21",
+      "spriteName": "Fruits_20",
       "healthToRestore": 65,
       "isAbilityBooster": true,
       "change": "PogoPower",
@@ -214,7 +214,7 @@
       "id": 22,
       "itemName": "Plátano Arcoíris",
       "spriteSheetPath": "Items/Fruits",
-      "spriteName": "Fruits_22",
+      "spriteName": "Fruits_21",
       "healthToRestore": 95,
       "isAbilityBooster": true,
       "change": "JumpBoost",
@@ -225,12 +225,28 @@
       "id": 23,
       "itemName": "Manzana Dorada",
       "spriteSheetPath": "Items/Fruits",
-      "spriteName": "Fruits_23",
+      "spriteName": "Fruits_22",
       "healthToRestore": 100,
       "isAbilityBooster": true,
       "change": "HealthIncrease",
       "boostMultiplier": 1.5,
       "boostDuration": 60.0
+    },
+    {
+      "id": 24,
+      "itemName": "Llave de templo",
+      "spriteSheetPath": "Items/Fruits",
+      "spriteName": "Fruits_23",
+      "healthToRestore": -1,
+      "isAbilityBooster": false
+    },
+    {
+      "id": 25,
+      "itemName": "Llave de la jungla",
+      "spriteSheetPath": "Items/Fruits",
+      "spriteName": "Fruits_23",
+      "healthToRestore": -1,
+      "isAbilityBooster": false
     }
   ]
 }

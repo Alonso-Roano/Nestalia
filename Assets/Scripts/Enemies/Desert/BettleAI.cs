@@ -39,7 +39,7 @@ public class BlettleAI : MonoBehaviour
     private void OnDisable() => attack.OnAttackFinished -= HandleAttackFinished;
 
     // Update ahora es mucho más simple.
-    void Update()
+    void FixedUpdate()
     {
         if (Time.timeScale == 0f)
         {
