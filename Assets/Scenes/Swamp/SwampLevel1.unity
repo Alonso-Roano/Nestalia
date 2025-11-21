@@ -650057,7 +650057,7 @@ MonoBehaviour:
   - {fileID: 1126135739}
   - {fileID: 606216377}
   vidaPorPuntoDebil: 1
-  cooldownEntreAcciones: 1.5
+  cooldownEntreAcciones: 2
   "da\xF1oDelRayo": 1
   cantidadProyectilesRayo: 20
   tiempoEntreProyectiles: 0.1

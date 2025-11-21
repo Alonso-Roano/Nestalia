@@ -19,10 +19,17 @@ public class BlettleAI : MonoBehaviour
     private Vector3 startPosition;
     private int patrolDirection = 1;
 
+    private Collider2D[] colliders;
+    private Rigidbody2D rb;
+
+    private bool isVisible = true;
+
     private void Awake()
     {
         movement = GetComponent<EnemyMovement>();
         attack = GetComponent<EnemyAttack_Lunge>();
+        rb = GetComponent<Rigidbody2D>();
+        colliders = GetComponentsInChildren<Collider2D>();
     }
 
     private void Start()
@@ -38,9 +45,36 @@ public class BlettleAI : MonoBehaviour
     private void OnEnable() => attack.OnAttackFinished += HandleAttackFinished;
     private void OnDisable() => attack.OnAttackFinished -= HandleAttackFinished;
 
-    // Update ahora es mucho más simple.
+
+    // -------- VISIBILIDAD --------
+    private void OnBecameVisible()
+    {
+        if (isVisible) return;
+        isVisible = true;
+
+        // Activar todo
+        if (rb != null) rb.simulated = true;
+        foreach (var c in colliders) c.enabled = true;
+        enabled = true; // el propio script
+    }
+
+    private void OnBecameInvisible()
+    {
+        if (!isVisible) return;
+        isVisible = false;
+
+        // Desactivar todo
+        if (rb != null) rb.simulated = false;
+        foreach (var c in colliders) c.enabled = false;
+        enabled = false; // este script deja de ejecutar Update/FixedUpdate
+    }
+    // --------------------------------
+
+
     void FixedUpdate()
     {
+        if (!isVisible) return;
+
         if (Time.timeScale == 0f)
         {
             if (movement != null)
@@ -70,14 +104,12 @@ public class BlettleAI : MonoBehaviour
 
     private void PatrolBehavior()
     {
-        // 1. Lógica de transición
         if (playerTransform != null && Vector2.Distance(transform.position, playerTransform.position) <= detectionRange)
         {
             ChangeState(EnemyState.Chase);
             return;
         }
 
-        // 2. Lógica de acción
         movement.Move(new Vector2(patrolDirection, 0));
         if (Mathf.Abs(transform.position.x - startPosition.x) >= patrolDistance)
         {
@@ -96,20 +128,18 @@ public class BlettleAI : MonoBehaviour
 
         float distanceToPlayer = Vector2.Distance(transform.position, playerTransform.position);
 
-        // 1. Lógica de transición
         if (distanceToPlayer <= attackRange && attack.CanAttack())
         {
-            AttackBehavior(); // Llamamos directamente a la acción de atacar
+            AttackBehavior();
             return;
         }
-        
+
         if (distanceToPlayer > detectionRange)
         {
             ChangeState(EnemyState.Patrol);
             return;
         }
 
-        // 2. Lógica de acción
         Vector2 direction = (playerTransform.position - transform.position).normalized;
         movement.Move(direction, 1.5f);
     }
@@ -123,8 +153,6 @@ public class BlettleAI : MonoBehaviour
 
     private void HandleAttackFinished()
     {
-        // Cuando el ataque termina, decidimos qué hacer a continuación.
-        // Volver a Chase es una opción segura si el jugador sigue cerca.
         if (playerTransform != null && Vector2.Distance(transform.position, playerTransform.position) <= detectionRange)
         {
             ChangeState(EnemyState.Chase);
